@@ -12,17 +12,17 @@
 
 # Qt-es
 
-/.qmake.cache
-/.qmake.stash
+TPNote/.qmake.cache
+TPNote/.qmake.stash
 *.pro.user
 *.pro.user.*
 *.qbs.user
 *.qbs.user.*
 *.moc
-moc_*.cpp
-qrc_*.cpp
-ui_*.h
-Makefile*
+TPNote/moc_*.cpp
+TPNote/qrc_*.cpp
+TPNote/ui_*.h
+TPNote/Makefile*
 *build-*
 
 # QtCreator
@@ -34,5 +34,5 @@ Makefile*
 *.qmlproject.user.*
 
 # QtCtreator CMake
-CMakeLists.txt.user
+TPNote/CMakeLists.txt.user
 
