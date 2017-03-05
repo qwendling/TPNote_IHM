@@ -14,6 +14,8 @@
 
 TPNote/.qmake.cache
 TPNote/.qmake.stash
+Projet_IHM/.qmake.cache
+Projet_IHM/.qmake.stash
 *.pro.user
 *.pro.user.*
 *.qbs.user
@@ -23,6 +25,10 @@ TPNote/moc_*.cpp
 TPNote/qrc_*.cpp
 TPNote/ui_*.h
 TPNote/Makefile*
+Projet_IHM/moc_*.cpp
+Projet_IHM/qrc_*.cpp
+Projet_IHM/ui_*.h
+Projet_IHM/Makefile*
 *build-*
 
 # QtCreator
@@ -34,5 +40,5 @@ TPNote/Makefile*
 *.qmlproject.user.*
 
 # QtCtreator CMake
-TPNote/CMakeLists.txt.user
-
+Projet_IHM/CMakeLists.txt.user
+Projet_IHM/CMakeLists.txt.user
