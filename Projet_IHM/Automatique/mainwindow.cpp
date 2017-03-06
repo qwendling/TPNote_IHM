@@ -6,9 +6,12 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    vanneDroite(new Vanne),
+    vanneGauche(new Vanne)
 {
     ui->setupUi(this);
+    QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
 
     //Init affichage
     ui->BateauMilieu->setVisible(false);
@@ -155,4 +158,8 @@ void MainWindow::on_StopButton_clicked()
 
     ui->Vert1->setVisible(false);
     ui->Vert2->setVisible(false);
+}
+
+void MainWindow::VanneDroiteOuverte(){
+    qDebug("Vanne droite ouverte");
 }

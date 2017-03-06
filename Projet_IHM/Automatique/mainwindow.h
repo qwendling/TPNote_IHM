@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "ui_mainwindow.h"
+#include "vanne.h"
 #include <QBasicTimer>
 #include <QTimer>
 
@@ -29,8 +30,11 @@ private slots:
     void boat_init();
     void on_StopButton_clicked();
     void init_ui(QPushButton* item);
+    void VanneDroiteOuverte();
 private:
     Ui::MainWindow *ui;
+    Vanne* vanneDroite;
+    Vanne* vanneGauche;
 
     //Timer porte
     QBasicTimer porte1;
