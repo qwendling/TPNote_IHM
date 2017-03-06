@@ -73,14 +73,17 @@ void MainWindow::timerEvent(QTimerEvent *event){
 }
 
 
+void MainWindow::init_ui(QPushButton* item){
+    item->setVisible(true);
+    item->setEnabled(true);
+}
+
 void MainWindow::boat_init()
 {
-    ui->Bateau1->setVisible(true);
-    ui->Bateau1->setEnabled(true);
-    ui->Bateau2->setVisible(true);
-    ui->Bateau2->setEnabled(true);
+    init_ui(ui->Bateau1);
+    init_ui(ui->Bateau2);
+    init_ui(ui->BateauMilieu);
     ui->BateauMilieu->setVisible(false);
-    ui->BateauMilieu->setEnabled(true);
 }
 
 void MainWindow::light_init()

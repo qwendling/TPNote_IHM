@@ -28,6 +28,7 @@ private slots:
     void light_init();
     void boat_init();
     void on_StopButton_clicked();
+    void init_ui(QPushButton* item);
 private:
     Ui::MainWindow *ui;
 
