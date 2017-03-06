@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QLCDNumber>
 #include <QDebug>
+#include <QPixmap>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
