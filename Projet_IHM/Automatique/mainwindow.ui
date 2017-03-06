@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>925</width>
-    <height>501</height>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,8 +36,8 @@
    <widget class="QGraphicsView" name="Cabane">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>80</y>
+      <x>400</x>
+      <y>110</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -107,14 +107,20 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>60</y>
-      <width>55</width>
-      <height>16</height>
+      <x>450</x>
+      <y>70</y>
+      <width>21</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Perso</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../RessourcesGraph/Place.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="Vert1">
@@ -238,7 +244,7 @@
      <x>0</x>
      <y>0</y>
      <width>925</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
