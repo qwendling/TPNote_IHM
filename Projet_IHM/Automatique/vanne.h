@@ -8,8 +8,10 @@ class Vanne : public QThread
     Q_OBJECT
     public:
         explicit Vanne(QObject *parent = 0);
+
+    public slots:
         void Ouverture();
-    protected:
+    protected slots:
         void run();
 
     signals:

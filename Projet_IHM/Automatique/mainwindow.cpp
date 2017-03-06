@@ -16,6 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
     QObject::connect(vanneGauche, SIGNAL(VanneOuverte()), this, SLOT(VanneGaucheOuverte()));
+    QObject::connect(this, SIGNAL(OuvrirVanneGauche()), vanneGauche, SLOT(Ouverture()));
+    QObject::connect(this, SIGNAL(OuvrirVanneDroite()), vanneDroite, SLOT(Ouverture()));
 
     vanneDroite->start();
     vanneGauche->start();
@@ -115,7 +117,7 @@ void MainWindow::on_Bateau1_clicked()
     porte1.start(10000,this);
     general.start(40000,this);
 
-    vanneGauche->Ouverture();
+    emit OuvrirVanneGauche();
 
     //set sens
     sens = true ;
@@ -133,7 +135,7 @@ void MainWindow::on_Bateau2_clicked()
     porte2.start(10000,this);
     general.start(30000,this);
 
-    vanneDroite->Ouverture();
+    emit OuvrirVanneDroite();
     //set sens
     sens = false ;
 }

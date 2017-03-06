@@ -32,7 +32,9 @@ private slots:
     void init_ui(QPushButton* item);
     void VanneDroiteOuverte();
     void VanneGaucheOuverte();
-
+signals:
+    void OuvrirVanneGauche();
+    void OuvrirVanneDroite();
 private:
     Ui::MainWindow *ui;
     Vanne* vanneDroite;
