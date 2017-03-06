@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>919</width>
-    <height>585</height>
+    <width>925</width>
+    <height>501</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="StopButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>350</y>
+      <x>380</x>
+      <y>280</y>
       <width>181</width>
       <height>161</height>
      </rect>
@@ -43,31 +43,11 @@
      </rect>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="Bord1">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>641</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="Bord2">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>280</y>
-      <width>641</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Bateau1">
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>200</y>
+      <y>170</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -76,34 +56,14 @@
      <string>Boat1</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="Porte1">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>160</y>
-      <width>41</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="Porte2">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>160</y>
-      <width>41</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Bateau2">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>200</y>
+      <x>670</x>
+      <y>160</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -132,7 +92,7 @@
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>200</y>
+      <y>170</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -157,56 +117,118 @@
      <string>Perso</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="Vert1">
+   <widget class="QLabel" name="Vert1">
     <property name="geometry">
      <rect>
       <x>330</x>
       <y>80</y>
-      <width>21</width>
-      <height>20</height>
+      <width>31</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/GreenFire.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QRadioButton" name="Rouge1">
+   <widget class="QLabel" name="Rouge1">
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>100</y>
-      <width>21</width>
-      <height>20</height>
+      <y>80</y>
+      <width>31</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/RedFire.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QRadioButton" name="Vert2">
+   <widget class="QLabel" name="Vert2">
     <property name="geometry">
      <rect>
       <x>560</x>
       <y>80</y>
-      <width>21</width>
-      <height>20</height>
+      <width>31</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/GreenFire.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QRadioButton" name="Rouge2">
+   <widget class="QLabel" name="Rouge2">
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>100</y>
-      <width>16</width>
-      <height>20</height>
+      <y>80</y>
+      <width>31</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/RedFire.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BordBas">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>250</y>
+      <width>581</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/BordBas.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BordBas_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>110</y>
+      <width>581</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../RessourcesGraph/BordHaut.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -215,7 +237,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>919</width>
+     <width>925</width>
      <height>26</height>
     </rect>
    </property>
