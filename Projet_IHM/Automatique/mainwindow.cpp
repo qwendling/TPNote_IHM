@@ -11,8 +11,14 @@ MainWindow::MainWindow(QWidget *parent) :
     vanneGauche(new Vanne)
 {
     ui->setupUi(this);
-    QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
+    ui->BordBas->setVisible(true);
+    ui->BordBas->setEnabled(true);
 
+    QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
+    QObject::connect(vanneGauche, SIGNAL(VanneOuverte()), this, SLOT(VanneGaucheOuverte()));
+
+    vanneDroite->start();
+    vanneGauche->start();
     //Init affichage
     ui->BateauMilieu->setVisible(false);
     light_init();
@@ -109,6 +115,8 @@ void MainWindow::on_Bateau1_clicked()
     porte1.start(10000,this);
     general.start(40000,this);
 
+    vanneGauche->Ouverture();
+
     //set sens
     sens = true ;
 }
@@ -125,6 +133,7 @@ void MainWindow::on_Bateau2_clicked()
     porte2.start(10000,this);
     general.start(30000,this);
 
+    vanneDroite->Ouverture();
     //set sens
     sens = false ;
 }
@@ -162,4 +171,8 @@ void MainWindow::on_StopButton_clicked()
 
 void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
+}
+
+void MainWindow::VanneGaucheOuverte(){
+    qDebug("Vanne gauche ouverte");
 }

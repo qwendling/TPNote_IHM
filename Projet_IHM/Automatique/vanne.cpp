@@ -11,3 +11,4 @@ void Vanne::run(){
 void Vanne::Ouverture(){
     emit VanneOuverte();
 }
+

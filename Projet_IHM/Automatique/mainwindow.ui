@@ -136,7 +136,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -155,7 +155,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -174,7 +174,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -193,7 +193,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -212,10 +212,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/BordBas.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="BordBas_2">
@@ -231,7 +234,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/BordHaut.png</pixmap>
+     <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -244,7 +247,7 @@
      <x>0</x>
      <y>0</y>
      <width>925</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -259,7 +262,9 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
  <slots>
   <slot>on_Bateau_clicked()</slot>

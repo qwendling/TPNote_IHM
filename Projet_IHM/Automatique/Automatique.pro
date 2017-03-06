@@ -31,3 +31,6 @@ HEADERS  += mainwindow.h \
     vanne.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    images.qrc

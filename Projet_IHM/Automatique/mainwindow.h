@@ -31,6 +31,8 @@ private slots:
     void on_StopButton_clicked();
     void init_ui(QPushButton* item);
     void VanneDroiteOuverte();
+    void VanneGaucheOuverte();
+
 private:
     Ui::MainWindow *ui;
     Vanne* vanneDroite;
