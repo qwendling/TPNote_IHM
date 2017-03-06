@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     manuelle \
-    Automatique
+    Automatique \
+    Simulation
