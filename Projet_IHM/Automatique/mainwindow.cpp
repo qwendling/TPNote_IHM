@@ -16,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
     QObject::connect(vanneGauche, SIGNAL(VanneOuverte()), this, SLOT(VanneGaucheOuverte()));
+    QObject::connect(vanneGauche, SIGNAL(DebutOuverture()), this, SLOT(DebutOuvertureG()));
+    QObject::connect(vanneDroite, SIGNAL(DebutOuverture()), this, SLOT(DebutOuvertureD()));
+
     QObject::connect(this, SIGNAL(OuvrirVanneGauche()), vanneGauche, SLOT(Ouverture()));
     QObject::connect(this, SIGNAL(OuvrirVanneDroite()), vanneDroite, SLOT(Ouverture()));
 
@@ -169,6 +172,14 @@ void MainWindow::on_StopButton_clicked()
 
     ui->Vert1->setVisible(false);
     ui->Vert2->setVisible(false);
+}
+
+void MainWindow::DebutOuvertureG(){
+    qDebug("Debut ouverture Gauche");
+}
+
+void MainWindow::DebutOuvertureD(){
+    qDebug("Debut ouverture Droite");
 }
 
 void MainWindow::VanneDroiteOuverte(){

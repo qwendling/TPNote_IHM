@@ -32,6 +32,8 @@ private slots:
     void init_ui(QPushButton* item);
     void VanneDroiteOuverte();
     void VanneGaucheOuverte();
+    void DebutOuvertureG();
+    void DebutOuvertureD();
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();

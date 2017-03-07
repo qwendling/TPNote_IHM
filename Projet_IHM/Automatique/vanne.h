@@ -2,6 +2,8 @@
 #define VANNE_H
 
 #include <QThread>
+#include <QBasicTimer>
+#include <QTimer>
 
 class Vanne : public QThread
 {
@@ -11,11 +13,15 @@ class Vanne : public QThread
 
     public slots:
         void Ouverture();
+        void FinOuverture();
     protected slots:
         void run();
+    private:
+        QTimer Touverture;
 
     signals:
         void VanneOuverte();
+        void DebutOuverture();
 };
 
 #endif // VANNE_H

@@ -6,12 +6,23 @@
 #include <QBasicTimer>
 #include <QTimer>
 
-class Porte
+class Porte : public QThread
 {
+    Q_OBJECT
 public:
     explicit Porte(QObject *parent = 0);
 private:
-    QBasicTimer Touverture;
+    QTimer Touverture;
+    //représente l'avancement 0=fermer 1=ouvert tout autre état est intermédiaire
+    double Avancement;
+
+public slots:
+    void DebutOuverture();
+    void FinOuverture();
+    void EtapeOuverture();
+signals:
+    void Etat(double);
+    void Ouvert();
 
 };
 
