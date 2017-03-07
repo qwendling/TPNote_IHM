@@ -31,6 +31,8 @@ public slots:
     void InitUi();
     void BateauAvanceAmont();
     void BateauAvanceAvale();
+    void BateauMonter();
+    void BateauDescente();
 
     private slots:
     void on_Etap1_clicked();
