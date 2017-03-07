@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/Ecluse.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -46,7 +46,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -65,7 +65,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -84,7 +84,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -103,7 +103,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -226,7 +226,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -245,7 +245,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -264,7 +264,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -283,7 +283,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -315,7 +315,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/Bateau1.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -334,7 +334,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/Bateau2.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -410,6 +410,8 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../Automatique/images.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -239,7 +239,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/BordHaut.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -258,7 +258,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../RessourcesGraph/BordBas.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -310,7 +310,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+          <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -323,7 +323,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+          <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -352,7 +352,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../RessourcesGraph/GreenFire.png</pixmap>
+          <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -365,7 +365,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../../RessourcesGraph/RedFire.png</pixmap>
+          <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -394,6 +394,32 @@
      </item>
     </layout>
    </widget>
+   <widget class="QGraphicsView" name="Porte1">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>290</y>
+      <width>31</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="Porte2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>290</y>
+      <width>31</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -416,6 +442,8 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../Automatique/images.qrc"/>
+ </resources>
  <connections/>
 </ui>
