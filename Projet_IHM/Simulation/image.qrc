@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/pics">
+        <file>../../RessourcesGraph/Bateau1.png</file>
+        <file>../../RessourcesGraph/Bateau2.png</file>
+        <file>../../RessourcesGraph/BordBas.png</file>
+        <file>../../RessourcesGraph/BordHaut.png</file>
+        <file>../../RessourcesGraph/Ecluse.png</file>
+        <file>../../RessourcesGraph/GreenFire.png</file>
+        <file>../../RessourcesGraph/Place.png</file>
+        <file>../../RessourcesGraph/Porte.png</file>
+        <file>../../RessourcesGraph/RedFire.png</file>
+    </qresource>
+</RCC>
