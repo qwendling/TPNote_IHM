@@ -13,7 +13,7 @@ class Vanne : public QThread
     public:
         explicit Vanne(QObject *parent = 0);
         bool est_alerte;
-        static Eau _eau;
+        static Eau* _eau;
 
     public slots:
         void Ouverture();
