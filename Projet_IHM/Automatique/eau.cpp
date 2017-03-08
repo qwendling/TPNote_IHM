@@ -3,7 +3,6 @@
 
 Eau::Eau(QObject *parent) : QThread(parent)
 {
-    this->start();
     QObject::connect(&Tavancement, SIGNAL(timeout()), this, SLOT(Intermediaire()));
     debit=0.1;
 }
@@ -28,12 +27,17 @@ void Eau::Descente(){
 
 void Eau::Intermediaire(){
     avancement += debitEffectif;
-    if(avancement <= 0){
+    char s[128];
+    snprintf(s,128,"%lf",avancement);
+    qDebug(s);
+    emit Etat(avancement);
+    if(avancement < debitEffectif){
         avancement = 0;
         emit estEnBas();
+        Tavancement.stop();
         return;
     }
-    if(avancement >= 1){
+    if(avancement > 1-debitEffectif){
         avancement =1;
         emit estEnHaut();
         Tavancement.stop();

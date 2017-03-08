@@ -10,11 +10,18 @@ MainWindow::MainWindow(QWidget *parent) :
     vanneDroite(new Vanne),
     vanneGauche(new Vanne),
     porteDroite(new Porte),
-    porteGauche(new Porte)
+    porteGauche(new Porte),
+    _eau(new Eau)
 {
     ui->setupUi(this);
     ui->BordBas->setVisible(true);
     ui->BordBas->setEnabled(true);
+
+    vanneDroite->start();
+    vanneGauche->start();
+    porteDroite->start();
+    porteGauche->start();
+    _eau->start();
 
     //Binding des signaux associés aux vannes
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
@@ -35,10 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(porteDroite, SIGNAL(Fermer()), this, SLOT(PorteDfermer()));
 
 
-    vanneDroite->start();
-    vanneGauche->start();
-    porteDroite->start();
-    porteGauche->start();
+
     //Init affichage
     ui->BateauMilieu->setVisible(false);
     light_init();
@@ -169,6 +173,7 @@ void MainWindow::VanneDroiteOuverte(){
 
 void MainWindow::VanneGaucheOuverte(){
     qDebug("Vanne gauche ouverte");
+    _eau->Monter();
     porteGauche->DebutOuverture();
 }
 

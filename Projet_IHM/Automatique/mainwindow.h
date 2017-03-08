@@ -5,6 +5,7 @@
 #include "ui_mainwindow.h"
 #include "vanne.h"
 #include "porte.h"
+#include "eau.h"
 #include <QBasicTimer>
 #include <QTimer>
 
@@ -70,6 +71,7 @@ private:
     Vanne* vanneGauche;
     Porte* porteGauche;
     Porte* porteDroite;
+    Eau* _eau;
 
     //Timer porte
     QBasicTimer porte1;

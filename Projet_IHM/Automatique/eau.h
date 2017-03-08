@@ -6,7 +6,6 @@
 #include <QBasicTimer>
 #include <QTimer>
 
-
 class Eau : public QThread {
     Q_OBJECT
 public:
@@ -28,6 +27,7 @@ public slots:
 signals:
     void estEnBas();
     void estEnHaut();
+    void Etat(double);
 
 private slots:
     void Intermediaire();
