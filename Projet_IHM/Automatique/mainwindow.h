@@ -41,6 +41,22 @@ private slots:
     void PorteDouverte();
     void PorteGfermer();
     void PorteDfermer();
+
+
+    //Ajout fonction de simulation
+
+    void OuverturePorte (QGraphicsView *porte);
+    void FermeturePorte(QGraphicsView* porte);
+    void EauSASmonte();
+    void EauSASdescend();
+    void InitUi();
+    void BateauAvanceAmont();
+    void BateauAvanceAvale();
+    void BateauMonter();
+    void BateauDescente();
+    void FeuVert(QLabel* vert , QLabel* rouge);
+    void FeuRouge(QLabel* vert , QLabel* rouge);
+
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();
