@@ -9,5 +9,6 @@
         <file>../../RessourcesGraph/Place.png</file>
         <file>../../RessourcesGraph/Porte.png</file>
         <file>../../RessourcesGraph/RedFire.png</file>
+        <file>../../RessourcesGraph/Bateau2Milieu.png</file>
     </qresource>
 </RCC>

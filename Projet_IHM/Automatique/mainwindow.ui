@@ -730,7 +730,7 @@
         <x>620</x>
         <y>30</y>
         <width>131</width>
-        <height>124</height>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="Mdp">
@@ -813,7 +813,17 @@
        <string notr="true">style =&quot;visible:hidden&quot;</string>
       </property>
       <property name="text">
-       <string>BoatMilieu</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="images.qrc">
+        <normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
       </property>
      </widget>
      <widget class="QPushButton" name="Bateau2">
@@ -1062,12 +1072,10 @@
    <zorder>BateauAvale</zorder>
    <zorder>EauSas</zorder>
    <zorder>Eau3</zorder>
-   <zorder>RougeV2</zorder>
    <zorder>VertV1</zorder>
    <zorder>Decors</zorder>
    <zorder>BateauAmont</zorder>
    <zorder>VertV2</zorder>
-   <zorder>RougeP2</zorder>
    <zorder>VertP2</zorder>
    <zorder>RougeP1</zorder>
    <zorder>Porte2</zorder>
@@ -1075,6 +1083,8 @@
    <zorder>RougeV1</zorder>
    <zorder>APageInterface</zorder>
    <zorder>Porte1</zorder>
+   <zorder>RougeP2</zorder>
+   <zorder>RougeV2</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
