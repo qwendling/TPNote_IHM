@@ -175,7 +175,7 @@ void MainWindow::VanneGaucheOuverte(){
 void MainWindow::AvancementPorteDroite(double valeur){
     char s[64];
     snprintf(s,64,"avancement porte droite : %f /1",valeur);
-    PorteOF(ui->Porte2 , valeur , myIdPorte::Droite);
+    PorteOF(ui->Porte2 , valeur , IdPorte::Droite);
     qDebug(s);
 }
 
@@ -258,7 +258,7 @@ void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
     vert->setVisible(false);
 }
 
-void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte idporte)
+void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte::enumId idporte)
 {
     if(idporte == IdPorte::Gauche)
     {

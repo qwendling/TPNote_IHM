@@ -11,7 +11,11 @@
 namespace Ui {
 class MainWindow;
 }
-enum  IdPorte{Gauche , Droite};
+
+namespace IdPorte {
+    enum  enumId{Gauche , Droite};
+}
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -20,7 +24,6 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    IdPorte myIdPorte;
 
 public slots:
 
@@ -47,7 +50,7 @@ private slots:
 
     //Ajout fonction de simulation
 
-    void PorteOF(QGraphicsView* porte , float value , IdPorte idporte);
+    void PorteOF(QGraphicsView* porte , float value , IdPorte::enumId idporte);
     void EauSASmonte();
     void EauSASdescend();
     void InitUi();
