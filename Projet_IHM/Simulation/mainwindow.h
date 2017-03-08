@@ -9,6 +9,10 @@ namespace Ui {
 class MainWindow;
 }
 
+namespace IdPorte {
+    enum  enumId{Gauche , Droite};
+}
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -17,7 +21,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    enum  IdPorte{Gauche , Droite};
 
 private:
     Ui::MainWindow *ui;
@@ -39,7 +42,7 @@ public slots:
     void BateauDescente();
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
-    void Porte(QGraphicsView* porte, float value, MainWindow::IdPorte idporte);
+    void Porte(QGraphicsView* porte, float value, IdPorte::enumId idporte);
 
     private slots:
     void on_pushButton1_clicked();

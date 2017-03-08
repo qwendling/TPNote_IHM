@@ -138,9 +138,9 @@ void MainWindow::BateauAvanceAvale()
 
 
 
-void MainWindow::Porte(QGraphicsView* porte , float value , MainWindow::IdPorte idporte)
+void MainWindow::Porte(QGraphicsView* porte , float value , IdPorte::enumId idporte)
 {
-    if(idporte == MainWindow::IdPorte::Gauche)
+    if(idporte == IdPorte::Gauche)
     {
         QRect geo_new = porte->geometry();
         geo_new.moveTop(80+(value*100));
@@ -160,30 +160,30 @@ void MainWindow::Porte(QGraphicsView* porte , float value , MainWindow::IdPorte 
 
 void MainWindow::on_pushButton1_clicked()
 {
-    Porte(ui->Porte1 , 0 , MainWindow::IdPorte::Gauche);
+    Porte(ui->Porte1 , 0 , IdPorte::Gauche);
 }
 
 void MainWindow::on_Etap2_clicked()
 {
-    Porte(ui->Porte1 , 0.5 , MainWindow::IdPorte::Gauche);
+    Porte(ui->Porte1 , 0.5 , IdPorte::Gauche);
 }
 
 void MainWindow::on_pushButton3_clicked()
 {
-    Porte(ui->Porte1 , 1. , MainWindow::IdPorte::Gauche);
+    Porte(ui->Porte1 , 1. , IdPorte::Gauche);
 }
 
 void MainWindow::on_Etape1_clicked()
 {
-    Porte(ui->Porte2 , 0 , MainWindow::IdPorte::Droite);
+    Porte(ui->Porte2 , 0 , IdPorte::Droite);
 }
 
 void MainWindow::on_Etape1_2_clicked()
 {
-     Porte(ui->Porte2 , 0.5 , MainWindow::IdPorte::Droite);
+     Porte(ui->Porte2 , 0.5 , IdPorte::Droite);
 }
 
 void MainWindow::on_Etape1_3_clicked()
 {
-    Porte(ui->Porte2 , 1. , MainWindow::IdPorte::Droite);
+    Porte(ui->Porte2 , 1. , IdPorte::Droite);
 }
