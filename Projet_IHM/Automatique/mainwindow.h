@@ -39,6 +39,8 @@ private slots:
     void AvancementPorteDroite(double);
     void PorteGouverte();
     void PorteDouverte();
+    void PorteGfermer();
+    void PorteDfermer();
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();

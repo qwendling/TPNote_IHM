@@ -256,7 +256,7 @@
      <pixmap resource="images.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="PorteDroite">
     <property name="geometry">
      <rect>
       <x>640</x>

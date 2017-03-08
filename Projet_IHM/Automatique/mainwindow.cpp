@@ -31,6 +31,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(porteGauche, SIGNAL(Etat(double)), this, SLOT(AvancementPorteGauche(double)));
     QObject::connect(porteGauche, SIGNAL(Ouvert()), this, SLOT(PorteGouverte()));
     QObject::connect(porteDroite, SIGNAL(Ouvert()), this, SLOT(PorteDouverte()));
+    QObject::connect(porteGauche, SIGNAL(Fermer()), this, SLOT(PorteGfermer()));
+    QObject::connect(porteDroite, SIGNAL(Fermer()), this, SLOT(PorteDfermer()));
 
 
     vanneDroite->start();
@@ -51,33 +53,7 @@ MainWindow::~MainWindow()
 void MainWindow::timerEvent(QTimerEvent *event){
 
     int id = event->timerId();
-    if(id==porte1.timerId())
-    {
-        //Affichage feu
-        ui->Vert1->setVisible(true);
-        ui->Rouge1->setVisible(false);
-
-        //Affichage bateau mid
-        ui->BateauMilieu->setVisible(true);
-        ui->Bateau1->setVisible(false);
-
-        //Stop timer porte 1
-        porte1.stop();
-    }
-    else if(id==porte2.timerId())
-    {
-        //Affichage feu
-        ui->Vert2->setVisible(true);
-        ui->Rouge2->setVisible(false);
-
-        //Affichage bateau mid
-        ui->BateauMilieu->setVisible(true);
-        ui->Bateau2->setVisible(false);
-
-        //Stop timer porte 1
-        porte2.stop();
-    }
-    else if(id==milieu.timerId())
+    if(id==milieu.timerId())
     {
         if(sens == true)
         {
@@ -111,6 +87,8 @@ void MainWindow::boat_init()
     init_ui(ui->Bateau2);
     init_ui(ui->BateauMilieu);
     ui->BateauMilieu->setVisible(false);
+    ui->PorteDroite->setVisible(true);
+    ui->PorteGauche->setVisible(true);
 }
 
 void MainWindow::light_init()
@@ -130,7 +108,6 @@ void MainWindow::on_Bateau1_clicked()
     ui->Bateau1->setEnabled(false);
 
     //Timer Lancement
-    porte1.start(10000,this);
     general.start(40000,this);
 
     emit OuvrirVanneGauche();
@@ -148,7 +125,6 @@ void MainWindow::on_Bateau2_clicked()
     ui->Bateau2->setEnabled(false);
 
     //Timer Lancement
-    porte2.start(10000,this);
     general.start(30000,this);
 
     emit OuvrirVanneDroite();
@@ -162,6 +138,12 @@ void MainWindow::on_BateauMilieu_clicked()
     ui->BateauMilieu->setEnabled(false);
 
     light_init();
+
+    if(sens){
+        porteGauche->DebutFermeture();
+    }else{
+        porteDroite->DebutFermeture();
+    }
 
     milieu.start(10000,this);
 
@@ -188,11 +170,11 @@ void MainWindow::on_StopButton_clicked()
 }
 
 void MainWindow::DebutOuvertureG(){
-    qDebug("Debut ouverture Gauche");
+    qDebug("Debut ouverture vanne Gauche");
 }
 
 void MainWindow::DebutOuvertureD(){
-    qDebug("Debut ouverture Droite");
+    qDebug("Debut ouverture vanne Droite");
 }
 
 void MainWindow::VanneDroiteOuverte(){
@@ -219,8 +201,39 @@ void MainWindow::AvancementPorteGauche(double valeur){
 
 void MainWindow::PorteDouverte(){
     qDebug("Porte droite ouverte");
+    //Affichage feu
+    ui->Vert2->setVisible(true);
+    ui->Rouge2->setVisible(false);
+
+    //Affichage bateau mid
+    ui->BateauMilieu->setVisible(!sens);
+    ui->Bateau2->setVisible(sens);
+
+    ui->PorteDroite->setVisible(false);
 }
 
 void MainWindow::PorteGouverte(){
     qDebug("Porte gauche ouverte");
+    //Affichage feu
+    ui->Vert1->setVisible(true);
+    ui->Rouge1->setVisible(false);
+
+
+    //Affichage bateau mid
+    ui->BateauMilieu->setVisible(sens);
+    ui->Bateau1->setVisible(!sens);
+
+    ui->PorteGauche->setVisible(false);
+}
+
+void MainWindow::PorteGfermer(){
+    qDebug("Porte gauche fermer");
+    ui->PorteGauche->setVisible(true);
+    porteDroite->DebutOuverture();
+}
+
+void MainWindow::PorteDfermer(){
+    qDebug("Porte droit fermer");
+    ui->PorteDroite->setVisible(true);
+    porteGauche->DebutOuverture();
 }
