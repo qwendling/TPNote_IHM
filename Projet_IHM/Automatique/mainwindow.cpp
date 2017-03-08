@@ -175,14 +175,14 @@ void MainWindow::VanneGaucheOuverte(){
 void MainWindow::AvancementPorteDroite(double valeur){
     char s[64];
     snprintf(s,64,"avancement porte droite : %f /1",valeur);
-    PorteOF(ui->Porte2 , valeur , MainWindow::IdPorte::Droite);
+    PorteOF(ui->Porte2 , valeur , myIdPorte::Droite);
     qDebug(s);
 }
 
 void MainWindow::AvancementPorteGauche(double valeur){
     char s[64];
     snprintf(s,64,"avancement porte gauche : %f /1",valeur);
-    PorteOF(ui->Porte1 , valeur , MainWindow::IdPorte::Gauche);
+    PorteOF(ui->Porte1 , valeur , IdPorte::Gauche);
     qDebug(s);
 }
 
@@ -258,9 +258,9 @@ void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
     vert->setVisible(false);
 }
 
-void MainWindow::PorteOF(QGraphicsView* porte , float value , MainWindow::IdPorte idporte)
+void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte idporte)
 {
-    if(idporte == MainWindow::IdPorte::Gauche)
+    if(idporte == IdPorte::Gauche)
     {
         QRect geo_new = porte->geometry();
         geo_new.moveTop(140+(value*100));
