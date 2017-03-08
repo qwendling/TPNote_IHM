@@ -3,6 +3,7 @@
 
 #include <QThread>
 #include <QBasicTimer>
+#include "eau.h"
 #include <QTimer>
 #define CHECK_ALERT if(est_alerte){return;}
 
@@ -12,6 +13,8 @@ class Vanne : public QThread
     public:
         explicit Vanne(QObject *parent = 0);
         bool est_alerte;
+        static Eau _eau;
+
     public slots:
         void Ouverture();
         void FinOuverture();
