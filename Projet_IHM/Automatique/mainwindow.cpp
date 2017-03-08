@@ -175,20 +175,23 @@ void MainWindow::VanneGaucheOuverte(){
 void MainWindow::AvancementPorteDroite(double valeur){
     char s[64];
     snprintf(s,64,"avancement porte droite : %f /1",valeur);
+    PorteOF(ui->Porte2 , valeur , MainWindow::IdPorte::Droite);
     qDebug(s);
 }
 
 void MainWindow::AvancementPorteGauche(double valeur){
     char s[64];
     snprintf(s,64,"avancement porte gauche : %f /1",valeur);
+    PorteOF(ui->Porte1 , valeur , MainWindow::IdPorte::Gauche);
     qDebug(s);
 }
 
 void MainWindow::PorteDouverte(){
     qDebug("Porte droite ouverte");
     //Affichage feu
-    ui->VertD->setVisible(true);
-    ui->RougeD->setVisible(false);
+    FeuVert(ui->VertD,ui->RougeD);
+    FeuVert(ui->VertP2 , ui->RougeP2);
+
 
     //Affichage bateau mid
     ui->BateauMilieu->setVisible(!sens);
@@ -200,9 +203,8 @@ void MainWindow::PorteDouverte(){
 void MainWindow::PorteGouverte(){
     qDebug("Porte gauche ouverte");
     //Affichage feu
-    ui->VertG->setVisible(true);
-    ui->RougeG->setVisible(false);
-
+    FeuVert(ui->VertG,ui->RougeG);
+    FeuVert(ui->VertP1 , ui->RougeP1);
 
     //Affichage bateau mid
     ui->BateauMilieu->setVisible(sens);
@@ -213,12 +215,18 @@ void MainWindow::PorteGouverte(){
 
 void MainWindow::PorteGfermer(){
     qDebug("Porte gauche fermer");
+    FeuRouge(ui->VertG,ui->RougeG);
+    FeuRouge(ui->VertP1 , ui->RougeP1);
+
     ui->PorteGauche->setVisible(true);
     porteDroite->DebutOuverture();
 }
 
 void MainWindow::PorteDfermer(){
     qDebug("Porte droit fermer");
+    FeuRouge(ui->VertD,ui->RougeD);
+    FeuRouge(ui->VertP2 , ui->RougeP2);
+
     ui->PorteDroite->setVisible(true);
     porteGauche->DebutOuverture();
 }
@@ -250,22 +258,20 @@ void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
     vert->setVisible(false);
 }
 
-//10 tick de fonction pour etre Ouverte ( correspond au temps voulu )
-void MainWindow::OuverturePorte(QGraphicsView* porte){
-
-    QRect geo_new = porte->geometry();
-
-    geo_new.translate(0,-15);
-    porte->setGeometry(geo_new);
-}
-
-//10 tick de fonction pour etre fermé ( correspond au temps voulu )
-void MainWindow::FermeturePorte(QGraphicsView* porte){
-
-    QRect geo_new = porte->geometry();
-
-    geo_new.translate(0,15);
-    porte->setGeometry(geo_new);
+void MainWindow::PorteOF(QGraphicsView* porte , float value , MainWindow::IdPorte idporte)
+{
+    if(idporte == MainWindow::IdPorte::Gauche)
+    {
+        QRect geo_new = porte->geometry();
+        geo_new.moveTop(140+(value*100));
+        porte->setGeometry(geo_new);
+    }
+    else
+    {
+        QRect geo_new = porte->geometry();
+        geo_new.moveTop(140+(value*120));
+        porte->setGeometry(geo_new);
+    }
 }
 
 

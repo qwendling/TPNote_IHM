@@ -174,24 +174,11 @@
      <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Etap1">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>290</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Etap2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>30</y>
+      <x>30</x>
+      <y>50</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -203,8 +190,8 @@
    <widget class="QPushButton" name="Etape1">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>290</y>
+      <x>710</x>
+      <y>10</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -292,8 +279,8 @@
    <widget class="QPushButton" name="pushButton3">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>60</y>
+      <x>30</x>
+      <y>90</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -340,10 +327,10 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton4">
+   <widget class="QPushButton" name="pushButton1">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>30</x>
       <y>10</y>
       <width>93</width>
       <height>28</height>
@@ -353,11 +340,24 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton1">
+   <widget class="QPushButton" name="Etape1_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
+      <x>710</x>
+      <y>40</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Etape1_3">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>80</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -376,7 +376,6 @@
    <zorder>EauSas</zorder>
    <zorder>Porte1</zorder>
    <zorder>Porte2</zorder>
-   <zorder>Etap1</zorder>
    <zorder>Etap2</zorder>
    <zorder>Etape1</zorder>
    <zorder>Rouge3</zorder>
@@ -386,8 +385,9 @@
    <zorder>pushButton3</zorder>
    <zorder>BateauAmont</zorder>
    <zorder>BateauAvale</zorder>
-   <zorder>pushButton4</zorder>
    <zorder>pushButton1</zorder>
+   <zorder>Etape1_2</zorder>
+   <zorder>Etape1_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

@@ -20,6 +20,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    enum  IdPorte{Gauche , Droite};
+
 public slots:
 
 private slots:
@@ -45,8 +47,7 @@ private slots:
 
     //Ajout fonction de simulation
 
-    void OuverturePorte (QGraphicsView *porte);
-    void FermeturePorte(QGraphicsView* porte);
+    void PorteOF(QGraphicsView* porte , float value , MainWindow::IdPorte idporte);
     void EauSASmonte();
     void EauSASdescend();
     void InitUi();

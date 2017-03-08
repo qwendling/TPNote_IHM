@@ -19,12 +19,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
 //FICHIER A IMPORTE DANS AUTO
 
-void MainWindow::Porte(QGraphicsView* porte , float value )
-{
-    QRect geo_new = porte->geometry();
-    geo_new.moveTop(100+(value*100));
-    porte->setGeometry(geo_new);
-}
 
 
 
@@ -143,56 +137,53 @@ void MainWindow::BateauAvanceAvale()
 }
 
 
-//Bouton Test
 
-void MainWindow::on_Etap1_clicked()
+void MainWindow::Porte(QGraphicsView* porte , float value , MainWindow::IdPorte idporte)
 {
-    Porte(ui->Porte1,0.5);
-    FeuRouge(ui->Vert1 , ui->Rouge1);
+    if(idporte == MainWindow::IdPorte::Gauche)
+    {
+        QRect geo_new = porte->geometry();
+        geo_new.moveTop(80+(value*100));
+        porte->setGeometry(geo_new);
+    }
+    else
+    {
+        QRect geo_new = porte->geometry();
+        geo_new.moveTop(80+(value*120));
+        porte->setGeometry(geo_new);
+    }
 }
 
-void MainWindow::on_Etape1_clicked()
+
+//Bouton Test
+
+
+void MainWindow::on_pushButton1_clicked()
 {
-    Porte(ui->Porte1,0.1);
-     FeuVert(ui->Vert1 , ui->Rouge1);
+    Porte(ui->Porte1 , 0 , MainWindow::IdPorte::Gauche);
 }
 
 void MainWindow::on_Etap2_clicked()
 {
-    Porte(ui->Porte1,0.4);
-    EauSASmonte();
-}
-
-void MainWindow::on_pushButton_clicked()
-{
-    EauSASdescend();
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    Porte(ui->Porte1,0.9);
-    BateauAvale->setVisible(true);
-    BateauAvanceAvale();
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    Porte(ui->Porte1,0);
-    BateauAmont->setVisible(true);
-    BateauAvanceAmont();
-}
-
-void MainWindow::on_pushButton1_clicked()
-{
-    Porte(ui->Porte1,0.2);
+    Porte(ui->Porte1 , 0.5 , MainWindow::IdPorte::Gauche);
 }
 
 void MainWindow::on_pushButton3_clicked()
 {
-    Porte(ui->Porte1,0.6);
+    Porte(ui->Porte1 , 1. , MainWindow::IdPorte::Gauche);
 }
 
-void MainWindow::on_pushButton4_clicked()
+void MainWindow::on_Etape1_clicked()
 {
-    Porte(ui->Porte1,0.8);
+    Porte(ui->Porte2 , 0 , MainWindow::IdPorte::Droite);
+}
+
+void MainWindow::on_Etape1_2_clicked()
+{
+     Porte(ui->Porte2 , 0.5 , MainWindow::IdPorte::Droite);
+}
+
+void MainWindow::on_Etape1_3_clicked()
+{
+    Porte(ui->Porte2 , 1. , MainWindow::IdPorte::Droite);
 }
