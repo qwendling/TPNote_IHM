@@ -8,6 +8,7 @@
 
 
 class Eau : public QThread {
+    Q_OBJECT
 public:
     explicit Eau(QObject *parent = 0);
     //valeur entre 0 et 1 qui indique l'avancement de l'eau
