@@ -8,12 +8,15 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     vanneDroite(new Vanne),
-    vanneGauche(new Vanne)
+    vanneGauche(new Vanne),
+    porteDroite(new Porte),
+    porteGauche(new Porte)
 {
     ui->setupUi(this);
     ui->BordBas->setVisible(true);
     ui->BordBas->setEnabled(true);
 
+    //Binding des signaux associés aux vannes
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
     QObject::connect(vanneGauche, SIGNAL(VanneOuverte()), this, SLOT(VanneGaucheOuverte()));
     QObject::connect(vanneGauche, SIGNAL(DebutOuverture()), this, SLOT(DebutOuvertureG()));
@@ -22,8 +25,18 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(this, SIGNAL(OuvrirVanneGauche()), vanneGauche, SLOT(Ouverture()));
     QObject::connect(this, SIGNAL(OuvrirVanneDroite()), vanneDroite, SLOT(Ouverture()));
 
+
+    //Binding des signaux associé au portes
+    QObject::connect(porteDroite, SIGNAL(Etat(double)), this, SLOT(AvancementPorteDroite(double)));
+    QObject::connect(porteGauche, SIGNAL(Etat(double)), this, SLOT(AvancementPorteGauche(double)));
+    QObject::connect(porteGauche, SIGNAL(Ouvert()), this, SLOT(PorteGouverte()));
+    QObject::connect(porteDroite, SIGNAL(Ouvert()), this, SLOT(PorteDouverte()));
+
+
     vanneDroite->start();
     vanneGauche->start();
+    porteDroite->start();
+    porteGauche->start();
     //Init affichage
     ui->BateauMilieu->setVisible(false);
     light_init();
@@ -184,8 +197,30 @@ void MainWindow::DebutOuvertureD(){
 
 void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
+    porteDroite->DebutOuverture();
 }
 
 void MainWindow::VanneGaucheOuverte(){
     qDebug("Vanne gauche ouverte");
+    porteGauche->DebutOuverture();
+}
+
+void MainWindow::AvancementPorteDroite(double valeur){
+    char s[64];
+    snprintf(s,64,"avancement ouverture porte droite : %f /1",valeur);
+    qDebug(s);
+}
+
+void MainWindow::AvancementPorteGauche(double valeur){
+    char s[64];
+    snprintf(s,64,"avancement ouverture porte gauche : %f /1",valeur);
+    qDebug(s);
+}
+
+void MainWindow::PorteDouverte(){
+    qDebug("Porte droite ouverte");
+}
+
+void MainWindow::PorteGouverte(){
+    qDebug("Porte gauche ouverte");
 }

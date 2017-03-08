@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 #include "vanne.h"
+#include "porte.h"
 #include <QBasicTimer>
 #include <QTimer>
 
@@ -34,6 +35,10 @@ private slots:
     void VanneGaucheOuverte();
     void DebutOuvertureG();
     void DebutOuvertureD();
+    void AvancementPorteGauche(double);
+    void AvancementPorteDroite(double);
+    void PorteGouverte();
+    void PorteDouverte();
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();
@@ -41,6 +46,8 @@ private:
     Ui::MainWindow *ui;
     Vanne* vanneDroite;
     Vanne* vanneGauche;
+    Porte* porteGauche;
+    Porte* porteDroite;
 
     //Timer porte
     QBasicTimer porte1;

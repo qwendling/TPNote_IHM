@@ -7,17 +7,19 @@ Porte::Porte(QObject *parent) : QThread(parent){
 }
 
 void Porte::DebutOuverture(){
-    if((1-Avancement) < 0.00001){
+    if(Avancement > 0.9){
         emit Ouvert();
+        return;
     }
     Touverture.start(1000);
 }
 
 void Porte::EtapeOuverture(){
-    Avancement += 1;
-    if((1-Avancement) < 0.00001){
+    Avancement += 0.1;
+    if(Avancement > 0.9){
         emit Ouvert();
         Touverture.stop();
+        return;
     }
     emit Etat(Avancement);
 }

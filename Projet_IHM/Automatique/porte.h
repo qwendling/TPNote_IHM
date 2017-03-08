@@ -18,7 +18,6 @@ private:
 
 public slots:
     void DebutOuverture();
-    void FinOuverture();
     void EtapeOuverture();
 signals:
     void Etat(double);
