@@ -265,12 +265,14 @@ void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte::enumId id
         QRect geo_new = porte->geometry();
         geo_new.moveTop(140+(value*100));
         porte->setGeometry(geo_new);
+        ui->BarGauche->setValue(value*100);
     }
     else
     {
         QRect geo_new = porte->geometry();
         geo_new.moveTop(140+(value*120));
         porte->setGeometry(geo_new);
+        ui->BarDroite->setValue(value*100);
     }
 }
 

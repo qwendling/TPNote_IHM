@@ -366,6 +366,19 @@
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QProgressBar" name="Barre">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>340</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
    <zorder>Terre</zorder>
    <zorder>Vert1</zorder>
    <zorder>Vert2</zorder>
@@ -388,6 +401,7 @@
    <zorder>pushButton1</zorder>
    <zorder>Etape1_2</zorder>
    <zorder>Etape1_3</zorder>
+   <zorder>Barre</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
