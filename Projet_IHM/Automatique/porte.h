@@ -5,12 +5,14 @@
 #include <QThread>
 #include <QBasicTimer>
 #include <QTimer>
+#define CHECK_ALERT if(!est_alerte){return;}
 
 class Porte : public QThread
 {
     Q_OBJECT
 public:
     explicit Porte(QObject *parent = 0);
+    bool est_alerte;
 private:
     QTimer Touverture;
     QTimer Tfermeture;

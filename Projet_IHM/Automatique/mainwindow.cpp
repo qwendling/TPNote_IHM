@@ -53,21 +53,7 @@ MainWindow::~MainWindow()
 void MainWindow::timerEvent(QTimerEvent *event){
 
     int id = event->timerId();
-    if(id==milieu.timerId())
-    {
-        if(sens == true)
-        {
-            ui->Vert2->setVisible(true);
-            ui->Rouge2->setVisible(false);
-        }
-        else
-        {
-            ui->Vert1->setVisible(true);
-            ui->Rouge1->setVisible(false);
-        }
-        milieu.stop();
-    }
-    else if(id==general.timerId())
+    if(id==general.timerId())
     {
         light_init();
         boat_init();
@@ -87,8 +73,8 @@ void MainWindow::boat_init()
     init_ui(ui->Bateau2);
     init_ui(ui->BateauMilieu);
     ui->BateauMilieu->setVisible(false);
-    ui->PorteDroite->setVisible(true);
-    ui->PorteGauche->setVisible(true);
+    porteGauche->DebutFermeture();
+    porteDroite->DebutFermeture();
 }
 
 void MainWindow::light_init()
@@ -145,16 +131,10 @@ void MainWindow::on_BateauMilieu_clicked()
         porteDroite->DebutFermeture();
     }
 
-    milieu.start(10000,this);
-
 }
 
 void MainWindow::on_StopButton_clicked()
 {
-    //Fin des Timers
-    porte1.stop();
-    porte2.stop();
-    milieu.stop();
 
     //Bloquage des boutons
     ui->Bateau1->setEnabled(false);
@@ -189,13 +169,13 @@ void MainWindow::VanneGaucheOuverte(){
 
 void MainWindow::AvancementPorteDroite(double valeur){
     char s[64];
-    snprintf(s,64,"avancement ouverture porte droite : %f /1",valeur);
+    snprintf(s,64,"avancement porte droite : %f /1",valeur);
     qDebug(s);
 }
 
 void MainWindow::AvancementPorteGauche(double valeur){
     char s[64];
-    snprintf(s,64,"avancement ouverture porte gauche : %f /1",valeur);
+    snprintf(s,64,"avancement porte gauche : %f /1",valeur);
     qDebug(s);
 }
 

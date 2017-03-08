@@ -5,9 +5,11 @@ Porte::Porte(QObject *parent) : QThread(parent){
     Avancement = 0;
     QObject::connect(&Touverture, SIGNAL(timeout()), this, SLOT(EtapeOuverture()));
     QObject::connect(&Tfermeture, SIGNAL(timeout()), this, SLOT(EtapeFermeture()));
+    est_alerte=false;
 }
 
 void Porte::DebutOuverture(){
+    CHECK_ALERT
     if(Avancement > 0.9){
         emit Ouvert();
         return;
@@ -16,6 +18,7 @@ void Porte::DebutOuverture(){
 }
 
 void Porte::EtapeOuverture(){
+    CHECK_ALERT
     Avancement += 0.1;
     if(Avancement > 0.9){
         emit Ouvert();
@@ -26,6 +29,7 @@ void Porte::EtapeOuverture(){
 }
 
 void Porte::DebutFermeture(){
+    CHECK_ALERT
     if(Avancement < 0.1){
         emit Fermer();
         return;
@@ -34,6 +38,7 @@ void Porte::DebutFermeture(){
 }
 
 void Porte::EtapeFermeture(){
+    CHECK_ALERT
     Avancement -= 0.1;
     if(Avancement < 0.1){
         emit Fermer();
