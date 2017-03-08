@@ -20,7 +20,7 @@
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <widget class="QLabel" name="Vert3">
+   <widget class="QLabel" name="VertP1">
     <property name="geometry">
      <rect>
       <x>1070</x>
@@ -33,7 +33,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -52,7 +52,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -84,7 +84,7 @@
      <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Rouge2_2">
+   <widget class="QLabel" name="RougeV2">
     <property name="geometry">
      <rect>
       <x>1232</x>
@@ -97,39 +97,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Etap2">
-    <property name="geometry">
-     <rect>
-      <x>1110</x>
-      <y>90</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>1340</x>
-      <y>70</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Vert1_2">
+   <widget class="QLabel" name="VertV1">
     <property name="geometry">
      <rect>
       <x>1020</x>
@@ -142,13 +116,16 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="Terre">
+   <widget class="QLabel" name="Decors">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>780</x>
@@ -161,7 +138,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -180,16 +157,16 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="Vert2_2">
+   <widget class="QLabel" name="VertV2">
     <property name="geometry">
      <rect>
-      <x>1232</x>
+      <x>1231</x>
       <y>328</y>
       <width>23</width>
       <height>23</height>
@@ -199,13 +176,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="Rouge4">
+   <widget class="QLabel" name="RougeP2">
     <property name="geometry">
      <rect>
       <x>1260</x>
@@ -218,39 +195,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Etap1">
-    <property name="geometry">
-     <rect>
-      <x>1040</x>
-      <y>350</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>1110</x>
-      <y>120</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Vert4">
+   <widget class="QLabel" name="VertP2">
     <property name="geometry">
      <rect>
       <x>1260</x>
@@ -263,26 +214,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="Etape1">
-    <property name="geometry">
-     <rect>
-      <x>1270</x>
-      <y>350</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Rouge3">
+   <widget class="QLabel" name="RougeP1">
     <property name="geometry">
      <rect>
       <x>1070</x>
@@ -295,7 +233,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -314,19 +252,6 @@
      <string notr="true">background-color: rgb(0, 0, 0);</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>810</x>
-      <y>70</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QGraphicsView" name="Eau1">
     <property name="geometry">
      <rect>
@@ -340,7 +265,7 @@
      <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Rouge1_2">
+   <widget class="QLabel" name="RougeV1">
     <property name="geometry">
      <rect>
       <x>1020</x>
@@ -353,7 +278,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -372,7 +297,7 @@
      <string notr="true">background-color: rgb(0, 0, 0);</string>
     </property>
    </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QStackedWidget" name="APageInterface">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -384,28 +309,28 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
-    <widget class="QWidget" name="page">
+    <widget class="QWidget" name="InterfaceManuelle">
      <widget class="QWidget" name="horizontalLayoutWidget_3">
       <property name="geometry">
        <rect>
         <x>200</x>
         <y>130</y>
-        <width>151</width>
-        <height>91</height>
+        <width>153</width>
+        <height>105</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_19">
+      <layout class="QHBoxLayout" name="FeuAmont">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_15">
+        <layout class="QVBoxLayout" name="PanneauButtonFeuAm">
          <item>
-          <widget class="QPushButton" name="pushButton_20">
+          <widget class="QPushButton" name="BtnVertAm">
            <property name="text">
             <string>Feu vert</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_25">
+          <widget class="QPushButton" name="BtnRougeAm">
            <property name="text">
             <string>Feu rouge</string>
            </property>
@@ -414,14 +339,14 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_16">
+        <layout class="QVBoxLayout" name="PanneauLabelFeuAm">
          <item>
-          <widget class="QLabel" name="label_15">
+          <widget class="QLabel" name="VertAm">
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+            <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -429,12 +354,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_16">
+          <widget class="QLabel" name="RougeAm">
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+            <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -454,11 +379,11 @@
         <height>111</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="PanneauAmont_3">
+      <layout class="QHBoxLayout" name="PanneauAmont">
        <item>
-        <layout class="QVBoxLayout" name="VanneAmont_9">
+        <layout class="QVBoxLayout" name="VanneAmont">
          <item>
-          <widget class="QLabel" name="TitreVam_3">
+          <widget class="QLabel" name="TitreVam">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -471,11 +396,11 @@
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="ButtonVam_3">
+          <layout class="QVBoxLayout" name="ButtonVam">
            <item>
-            <layout class="QHBoxLayout" name="PanneauBtnOVav_3">
+            <layout class="QHBoxLayout" name="PanneauBtnOVam">
              <item>
-              <widget class="QPushButton" name="BtnOVam_3">
+              <widget class="QPushButton" name="BtnOVam">
                <property name="text">
                 <string>Ouverture</string>
                </property>
@@ -484,9 +409,9 @@
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="PanneauBtnFVam_3">
+            <layout class="QHBoxLayout" name="PanneauBtnFVam">
              <item>
-              <widget class="QPushButton" name="BtnFVam_3">
+              <widget class="QPushButton" name="BtnFVam">
                <property name="text">
                 <string>Fermeture</string>
                </property>
@@ -499,9 +424,9 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="VanneAmont_10">
+        <layout class="QVBoxLayout" name="PorteAmont">
          <item>
-          <widget class="QLabel" name="TitrePam_3">
+          <widget class="QLabel" name="TitrePam">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -514,11 +439,11 @@
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_17">
+          <layout class="QVBoxLayout" name="ButtonPam">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <layout class="QHBoxLayout" name="PanneauBtnOPam">
              <item>
-              <widget class="QPushButton" name="pushButton_26">
+              <widget class="QPushButton" name="BtnOPam">
                <property name="text">
                 <string>Ouverture</string>
                </property>
@@ -527,9 +452,9 @@
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_21">
+            <layout class="QHBoxLayout" name="PanneauBtnFam">
              <item>
-              <widget class="QPushButton" name="pushButton_27">
+              <widget class="QPushButton" name="BtnFPam">
                <property name="text">
                 <string>Fermeture</string>
                </property>
@@ -548,20 +473,20 @@
        <rect>
         <x>420</x>
         <y>130</y>
-        <width>141</width>
-        <height>91</height>
+        <width>153</width>
+        <height>105</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_22">
+      <layout class="QHBoxLayout" name="FeuAval">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_18">
+        <layout class="QVBoxLayout" name="PanneauLabelFeuAv">
          <item>
-          <widget class="QLabel" name="label_17">
+          <widget class="QLabel" name="VertAv">
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+            <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -569,12 +494,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_18">
+          <widget class="QLabel" name="RougeAv">
            <property name="text">
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+            <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -584,16 +509,16 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_19">
+        <layout class="QVBoxLayout" name="PanneauButtonFeuAv">
          <item>
-          <widget class="QPushButton" name="pushButton_28">
+          <widget class="QPushButton" name="BtnVertAv">
            <property name="text">
             <string>Feu vert</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_29">
+          <widget class="QPushButton" name="BtnRougeAv">
            <property name="text">
             <string>Feu rouge</string>
            </property>
@@ -603,7 +528,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="CommandeDebug">
       <property name="geometry">
        <rect>
         <x>500</x>
@@ -613,7 +538,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_30">
+     <widget class="QPushButton" name="StopButtonM">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -629,7 +554,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="BorsBasM">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -642,7 +567,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -657,11 +582,11 @@
         <height>111</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_23">
+      <layout class="QHBoxLayout" name="PanneauAval">
        <item>
-        <layout class="QVBoxLayout" name="VanneAmont_11">
+        <layout class="QVBoxLayout" name="VanneAval">
          <item>
-          <widget class="QLabel" name="label_19">
+          <widget class="QLabel" name="TitreVav">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -674,11 +599,11 @@
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_20">
+          <layout class="QVBoxLayout" name="ButtonVav">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_24">
+            <layout class="QHBoxLayout" name="PanneauBtnOVav">
              <item>
-              <widget class="QPushButton" name="pushButton_31">
+              <widget class="QPushButton" name="BtnOVav">
                <property name="text">
                 <string>Ouverture</string>
                </property>
@@ -687,9 +612,9 @@
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_25">
+            <layout class="QHBoxLayout" name="PanneauBtnFVav">
              <item>
-              <widget class="QPushButton" name="pushButton_32">
+              <widget class="QPushButton" name="BtnFVav">
                <property name="text">
                 <string>Fermeture</string>
                </property>
@@ -702,9 +627,9 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="VanneAmont_12">
+        <layout class="QVBoxLayout" name="PorteAval">
          <item>
-          <widget class="QLabel" name="label_20">
+          <widget class="QLabel" name="TitrePav">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -717,11 +642,11 @@
           </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_21">
+          <layout class="QVBoxLayout" name="ButtonPav">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_26">
+            <layout class="QHBoxLayout" name="PanneauBtnOPav">
              <item>
-              <widget class="QPushButton" name="pushButton_33">
+              <widget class="QPushButton" name="BtnOPav">
                <property name="text">
                 <string>Ouverture</string>
                </property>
@@ -730,9 +655,9 @@
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_27">
+            <layout class="QHBoxLayout" name="PanneauBtnFPav">
              <item>
-              <widget class="QPushButton" name="pushButton_34">
+              <widget class="QPushButton" name="BtnFPav">
                <property name="text">
                 <string>Fermeture</string>
                </property>
@@ -746,7 +671,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_21">
+     <widget class="QLabel" name="BordHautM">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -759,13 +684,13 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="PorteDroite_2">
+     <widget class="QLabel" name="PorteDM">
       <property name="geometry">
        <rect>
         <x>510</x>
@@ -778,10 +703,10 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
       </property>
      </widget>
-     <widget class="QLabel" name="PorteGauche_2">
+     <widget class="QLabel" name="PorteGM">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -794,18 +719,18 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2">
+    <widget class="QWidget" name="InterfaceAutomatique">
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
         <x>620</x>
         <y>30</y>
         <width>131</width>
-        <height>81</height>
+        <height>71</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="Mdp">
@@ -821,7 +746,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="Authentification">
+     <widget class="QPushButton" name="AuthentifBtn">
       <property name="geometry">
        <rect>
         <x>620</x>
@@ -863,7 +788,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/BordBas.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -907,7 +832,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="images.qrc">
+       <iconset resource="../Simulation/image.qrc">
         <normaloff>:/pics/RessourcesGraph/Bateau2.png</normaloff>:/pics/RessourcesGraph/Bateau2.png</iconset>
       </property>
       <property name="iconSize">
@@ -930,7 +855,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
       </property>
      </widget>
      <widget class="QLabel" name="PorteGauche">
@@ -946,7 +871,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
       </property>
      </widget>
      <widget class="QPushButton" name="Bateau1">
@@ -968,7 +893,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="images.qrc">
+       <iconset resource="../Simulation/image.qrc">
         <normaloff>:/pics/RessourcesGraph/Bateau1.png</normaloff>:/pics/RessourcesGraph/Bateau1.png</iconset>
       </property>
       <property name="iconSize">
@@ -978,7 +903,7 @@
        </size>
       </property>
      </widget>
-     <widget class="QLabel" name="Vert1">
+     <widget class="QLabel" name="VertG">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -991,13 +916,13 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="Rouge1">
+     <widget class="QLabel" name="RougeG">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -1010,7 +935,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1020,13 +945,16 @@
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>140</y>
+        <y>150</y>
         <width>131</width>
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(88, 0, 0);</string>
+      </property>
      </widget>
-     <widget class="QLabel" name="Rouge2">
+     <widget class="QLabel" name="RougeD">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -1039,13 +967,13 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="Vert2">
+     <widget class="QLabel" name="VertD">
       <property name="geometry">
        <rect>
         <x>490</x>
@@ -1058,17 +986,17 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Place">
       <property name="geometry">
        <rect>
         <x>350</x>
-        <y>100</y>
+        <y>110</y>
         <width>21</width>
         <height>41</height>
        </rect>
@@ -1083,7 +1011,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="BordBas_2">
+     <widget class="QLabel" name="BordHaut">
       <property name="geometry">
        <rect>
         <x>70</x>
@@ -1096,7 +1024,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="images.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/BordHaut.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1104,28 +1032,22 @@
      </widget>
     </widget>
    </widget>
-   <zorder>Vert3</zorder>
+   <zorder>VertP1</zorder>
    <zorder>BateauAvale</zorder>
    <zorder>EauSas</zorder>
    <zorder>Eau3</zorder>
-   <zorder>Rouge2_2</zorder>
-   <zorder>Etap2</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>Vert1_2</zorder>
-   <zorder>Terre</zorder>
+   <zorder>RougeV2</zorder>
+   <zorder>VertV1</zorder>
+   <zorder>Decors</zorder>
    <zorder>BateauAmont</zorder>
-   <zorder>Vert2_2</zorder>
-   <zorder>Rouge4</zorder>
-   <zorder>Etap1</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>Vert4</zorder>
-   <zorder>Etape1</zorder>
-   <zorder>Rouge3</zorder>
+   <zorder>VertV2</zorder>
+   <zorder>RougeP2</zorder>
+   <zorder>VertP2</zorder>
+   <zorder>RougeP1</zorder>
    <zorder>Porte2</zorder>
-   <zorder>pushButton_3</zorder>
    <zorder>Eau1</zorder>
-   <zorder>Rouge1_2</zorder>
-   <zorder>stackedWidget</zorder>
+   <zorder>RougeV1</zorder>
+   <zorder>APageInterface</zorder>
    <zorder>Porte1</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -1150,7 +1072,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
+  <include location="../Simulation/image.qrc"/>
  </resources>
  <connections/>
  <slots>

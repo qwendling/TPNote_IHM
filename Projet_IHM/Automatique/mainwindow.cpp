@@ -79,10 +79,10 @@ void MainWindow::boat_init()
 
 void MainWindow::light_init()
 {
-   ui->Rouge1->setVisible(true);
-   ui->Rouge2->setVisible(true);
-   ui->Vert1->setVisible(false);
-   ui->Vert2->setVisible(false);
+   ui->RougeG->setVisible(true);
+   ui->RougeD->setVisible(true);
+   ui->VertG->setVisible(false);
+   ui->VertD->setVisible(false);
 }
 
 void MainWindow::on_Bateau1_clicked()
@@ -142,11 +142,11 @@ void MainWindow::on_StopButton_clicked()
     ui->BateauMilieu->setEnabled(false);
 
     //Affichage feu rouge
-    ui->Rouge1->setVisible(true);
-    ui->Rouge2->setVisible(true);
+    ui->RougeG->setVisible(true);
+    ui->RougeD->setVisible(true);
 
-    ui->Vert1->setVisible(false);
-    ui->Vert2->setVisible(false);
+    ui->VertG->setVisible(false);
+    ui->VertD->setVisible(false);
 }
 
 void MainWindow::DebutOuvertureG(){
@@ -182,8 +182,8 @@ void MainWindow::AvancementPorteGauche(double valeur){
 void MainWindow::PorteDouverte(){
     qDebug("Porte droite ouverte");
     //Affichage feu
-    ui->Vert2->setVisible(true);
-    ui->Rouge2->setVisible(false);
+    ui->VertD->setVisible(true);
+    ui->RougeD->setVisible(false);
 
     //Affichage bateau mid
     ui->BateauMilieu->setVisible(!sens);
@@ -195,8 +195,8 @@ void MainWindow::PorteDouverte(){
 void MainWindow::PorteGouverte(){
     qDebug("Porte gauche ouverte");
     //Affichage feu
-    ui->Vert1->setVisible(true);
-    ui->Rouge1->setVisible(false);
+    ui->VertG->setVisible(true);
+    ui->RougeG->setVisible(false);
 
 
     //Affichage bateau mid
