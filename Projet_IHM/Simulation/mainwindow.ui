@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -46,7 +46,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -65,7 +65,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -84,7 +84,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -103,7 +103,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -226,7 +226,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -245,7 +245,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -264,7 +264,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -283,13 +283,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton3">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -315,7 +315,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -334,13 +334,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../manuelle/images.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
+     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton4">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -353,7 +353,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton1">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -383,11 +383,11 @@
    <zorder>Vert3</zorder>
    <zorder>Rouge4</zorder>
    <zorder>Vert4</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>pushButton3</zorder>
    <zorder>BateauAmont</zorder>
    <zorder>BateauAvale</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
+   <zorder>pushButton4</zorder>
+   <zorder>pushButton1</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -411,7 +411,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="../manuelle/images.qrc"/>
+  <include location="../Automatique/images.qrc"/>
  </resources>
  <connections/>
 </ui>

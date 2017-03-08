@@ -35,6 +35,7 @@ public slots:
     void BateauDescente();
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
+    void Porte(QGraphicsView* porte, float value);
 
     private slots:
     void on_Etap1_clicked();
@@ -43,6 +44,9 @@ public slots:
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
     void on_pushButton_3_clicked();
+    void on_pushButton1_clicked();
+    void on_pushButton3_clicked();
+    void on_pushButton4_clicked();
 };
 
 #endif // MAINWINDOW_H

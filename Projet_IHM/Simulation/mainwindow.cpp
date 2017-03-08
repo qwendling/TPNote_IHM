@@ -17,6 +17,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+//FICHIER A IMPORTE DANS AUTO
+
+void MainWindow::Porte(QGraphicsView* porte , float value )
+{
+    QRect geo_new = porte->geometry();
+    geo_new.moveTop(100+(value*100));
+    porte->setGeometry(geo_new);
+}
+
+
+
+
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -44,6 +57,8 @@ void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
     rouge->setVisible(true);
     vert->setVisible(false);
 }
+
+
 
 //10 tick de fonction pour etre Ouverte ( correspond au temps voulu )
 void MainWindow::OuverturePorte(QGraphicsView* porte){
@@ -132,16 +147,19 @@ void MainWindow::BateauAvanceAvale()
 
 void MainWindow::on_Etap1_clicked()
 {
+    Porte(ui->Porte1,0.5);
     FeuRouge(ui->Vert1 , ui->Rouge1);
 }
 
 void MainWindow::on_Etape1_clicked()
 {
+    Porte(ui->Porte1,0.1);
      FeuVert(ui->Vert1 , ui->Rouge1);
 }
 
 void MainWindow::on_Etap2_clicked()
 {
+    Porte(ui->Porte1,0.4);
     EauSASmonte();
 }
 
@@ -152,12 +170,29 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    Porte(ui->Porte1,0.9);
     BateauAvale->setVisible(true);
     BateauAvanceAvale();
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
+    Porte(ui->Porte1,0);
     BateauAmont->setVisible(true);
     BateauAvanceAmont();
+}
+
+void MainWindow::on_pushButton1_clicked()
+{
+    Porte(ui->Porte1,0.2);
+}
+
+void MainWindow::on_pushButton3_clicked()
+{
+    Porte(ui->Porte1,0.6);
+}
+
+void MainWindow::on_pushButton4_clicked()
+{
+    Porte(ui->Porte1,0.8);
 }
