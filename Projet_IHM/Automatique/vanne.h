@@ -4,7 +4,7 @@
 #include <QThread>
 #include <QBasicTimer>
 #include <QTimer>
-#define CHECK_ALERT if(!est_alerte){return;}
+#define CHECK_ALERT if(est_alerte){return;}
 
 class Vanne : public QThread
 {
