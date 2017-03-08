@@ -15,14 +15,20 @@ class Vanne : public QThread
     public slots:
         void Ouverture();
         void FinOuverture();
+        void FinFermeture();
+        void Fermeture();
     protected slots:
         void run();
     private:
         QTimer Touverture;
+        QTimer Tfermeture;
 
     signals:
         void VanneOuverte();
         void DebutOuverture();
+        void VanneFermer();
+        void DebutFermeture();
+
 };
 
 #endif // VANNE_H

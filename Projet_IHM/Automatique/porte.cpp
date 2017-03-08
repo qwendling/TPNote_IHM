@@ -23,7 +23,6 @@ void Porte::EtapeOuverture(){
     if(Avancement > 0.9){
         emit Ouvert();
         Touverture.stop();
-        return;
     }
     emit Etat(Avancement);
 }
@@ -43,7 +42,6 @@ void Porte::EtapeFermeture(){
     if(Avancement < 0.1){
         emit Fermer();
         Tfermeture.stop();
-        return;
     }
     emit Etat(Avancement);
 }
