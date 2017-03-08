@@ -43,6 +43,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->BateauMilieu->setVisible(false);
     light_init();
 
+    EauSaS = ui->EauSas;
+    BateauAmont = ui->BateauAmont;
+    BateauAvale = ui->BateauAvale;
+    InitUi();
+
 }
 
 MainWindow::~MainWindow()

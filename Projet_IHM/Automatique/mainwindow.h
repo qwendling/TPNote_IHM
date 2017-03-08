@@ -76,6 +76,11 @@ private:
     //Sens ecluse  true->avale , false -> amont
     bool sens;
 
+    //Graphisme simulation
+    QGraphicsView* EauSaS;
+    QLabel* BateauAmont;
+    QLabel* BateauAvale;
+
 };
 
 #endif // MAINWINDOW_H
