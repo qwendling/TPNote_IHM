@@ -33,6 +33,8 @@ public slots:
     void BateauAvanceAvale();
     void BateauMonter();
     void BateauDescente();
+    void FeuVert(QLabel* vert , QLabel* rouge);
+    void FeuRouge(QLabel* vert , QLabel* rouge);
 
     private slots:
     void on_Etap1_clicked();

@@ -33,6 +33,18 @@ void MainWindow::InitUi()
     BateauAvale->setVisible(false);
 }
 
+void MainWindow::FeuVert(QLabel* vert , QLabel* rouge)
+{
+    vert->setVisible(true);
+    rouge->setVisible(false);
+}
+
+void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
+{
+    rouge->setVisible(true);
+    vert->setVisible(false);
+}
+
 //10 tick de fonction pour etre Ouverte ( correspond au temps voulu )
 void MainWindow::OuverturePorte(QGraphicsView* porte){
 
@@ -120,12 +132,12 @@ void MainWindow::BateauAvanceAvale()
 
 void MainWindow::on_Etap1_clicked()
 {
-    OuverturePorte(ui->Porte1);
+    FeuRouge(ui->Vert1 , ui->Rouge1);
 }
 
 void MainWindow::on_Etape1_clicked()
 {
-    OuverturePorte(ui->Porte2);
+     FeuVert(ui->Vert1 , ui->Rouge1);
 }
 
 void MainWindow::on_Etap2_clicked()
