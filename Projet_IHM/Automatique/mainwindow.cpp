@@ -66,22 +66,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::reset()
-{
-    etatreset=true;
-    nbreset=2;
-
-    vanneDroite->Fermeture();
-    vanneGauche->Fermeture();
-    porteDroite-> DebutFermeture();
-    porteGauche->DebutFermeture();
-
-
-    light_init();
-    boat_init();
-}
-
 void MainWindow::init_ui(QPushButton* item){
     item->setVisible(true);
     item->setEnabled(true);
@@ -106,7 +90,7 @@ void MainWindow::light_init()
 void MainWindow::on_Bateau1_clicked()
 {
     //general.stop();
-    general.start(20000);
+    general.start(40000);
 
     //Affichage
     ui->Bateau2->setVisible(false);
@@ -122,8 +106,7 @@ void MainWindow::on_Bateau1_clicked()
 
 void MainWindow::on_Bateau2_clicked()
 {
-    general.stop();
-    general.start(20000);
+    general.start(40000);
 
     //Affichage
     ui->Bateau1->setVisible(false);
@@ -138,7 +121,8 @@ void MainWindow::on_Bateau2_clicked()
 
 void MainWindow::on_BateauMilieu_clicked()
 {
-    general.start(20000);
+    general.stop();
+    general.start(40000);
 
     //a faire avec sender
     ui->BateauMilieu->setEnabled(false);
@@ -169,175 +153,6 @@ void MainWindow::on_StopButton_clicked()
     ui->VertD->setVisible(false);
 }
 
-void MainWindow::DebutOuvertureG(){
-    qDebug("Debut ouverture vanne Gauche");
-}
-
-void MainWindow::DebutOuvertureD(){
-    qDebug("Debut ouverture vanne Droite");
-}
-
-
-
-void MainWindow::VanneDroiteOuverte(){
-    qDebug("Vanne droite ouverte");
-    FeuVert(ui->VertV2 , ui->RougeV2);
-    porteDroite->DebutOuverture();
-}
-
-void MainWindow::VanneGaucheOuverte(){
-    FeuVert(ui->VertV1 , ui->RougeV1);
-    qDebug("Vanne gauche ouverte");
-    _eau->Monter();
-    porteGauche->DebutOuverture();
-}
-
-void MainWindow::AvancementPorteDroite(double valeur){
-    char s[64];
-    snprintf(s,64,"avancement porte droite : %f /1",valeur);
-    PorteOF(ui->Porte2 , valeur , IdPorte::Droite);
-    qDebug(s);
-}
-
-void MainWindow::AvancementPorteGauche(double valeur){
-    char s[64];
-    snprintf(s,64,"avancement porte gauche : %f /1",valeur);
-    PorteOF(ui->Porte1 , valeur , IdPorte::Gauche);
-    qDebug(s);
-}
-
-void MainWindow::PorteDouverte(){
-    qDebug("Porte droite ouverte");
-    //Affichage feu
-    FeuVert(ui->VertD,ui->RougeD);
-    FeuVert(ui->VertP2 , ui->RougeP2);
-
-
-    //Affichage bateau mid
-    ui->BateauMilieu->setVisible(!sens);
-    ui->Bateau2->setVisible(sens);
-
-    ui->PorteDroite->setVisible(false);
-}
-
-void MainWindow::PorteGouverte(){
-    qDebug("Porte gauche ouverte");
-    //Affichage feu
-    FeuVert(ui->VertG,ui->RougeG);
-    FeuVert(ui->VertP1 , ui->RougeP1);
-
-    //Affichage bateau mid
-    ui->BateauMilieu->setVisible(sens);
-    ui->Bateau1->setVisible(!sens);
-
-    ui->PorteGauche->setVisible(false);
-}
-
-void MainWindow::PorteGfermer(){
-    CHECK_RESET
-    qDebug("Porte gauche fermer");
-    FeuRouge(ui->VertG,ui->RougeG);
-    FeuRouge(ui->VertP1 , ui->RougeP1);
-
-    ui->PorteGauche->setVisible(true);
-    porteDroite->DebutOuverture();
-}
-
-void MainWindow::PorteDfermer(){
-    CHECK_RESET
-    qDebug("Porte droit fermer");
-    FeuRouge(ui->VertD,ui->RougeD);
-    FeuRouge(ui->VertP2 , ui->RougeP2);
-
-    ui->PorteDroite->setVisible(true);
-    porteGauche->DebutOuverture();
-}
-
-
-
-//Fonction de modification Simulation
-
-void MainWindow::InitUi()
-{
-    //Init Place
-    BateauAmont->setGeometry(120,30,91,81);
-    BateauAvale->setGeometry(540,110,91,81);
-
-    //Cache
-    BateauAmont->setVisible(false);
-    BateauAvale->setVisible(false);
-}
-
-void MainWindow::FeuVert(QLabel* vert , QLabel* rouge)
-{
-    vert->setVisible(true);
-    rouge->setVisible(false);
-}
-
-void MainWindow::FeuRouge(QLabel* vert , QLabel* rouge)
-{
-    rouge->setVisible(true);
-    vert->setVisible(false);
-}
-
-void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte::enumId idporte)
-{
-    if(idporte == IdPorte::Gauche)
-    {
-        QRect geo_new = porte->geometry();
-        geo_new.moveTop(140+(value*100));
-        porte->setGeometry(geo_new);
-        ui->BarGauche->setValue(value*100);
-    }
-    else
-    {
-        QRect geo_new = porte->geometry();
-        geo_new.moveTop(140+(value*120));
-        porte->setGeometry(geo_new);
-        ui->BarDroite->setValue(value*100);
-    }
-}
-
-void MainWindow::EauMD(double value)
-{
-    QRect geo_new = EauSaS->geometry();
-    geo_new.setTop(250-(value*80));
-    EauSaS->setGeometry(geo_new);
-}
-
-
-
-//Appellé quand l'eau du SaS monte et que le bateau est dedans
-void MainWindow::BateauMonter()
-{
-    QRect geo_new = BateauAvale->geometry();
-    geo_new.translate(0,-10);
-    BateauAvale->setGeometry(geo_new);
-}
-
-//Appellé quand l'eau du SaS descend et que le bateau est dedans
-void MainWindow::BateauDescente()
-{
-    QRect geo_new = BateauAmont->geometry();
-    geo_new.translate(0,+10);
-    BateauAmont->setGeometry(geo_new);
-}
-
-//10 tick de fonction pour etre au SaS
-void MainWindow::BateauAvanceAmont()
-{
-    QRect new_geo = BateauAmont->geometry();
-    new_geo.translate(20,0);
-    BateauAmont->setGeometry(new_geo);
-}
-
-//10 tick de fonction pour etre au SaS
-void MainWindow::BateauAvanceAvale()
-{
-    QRect new_geo = BateauAvale->geometry();
-    new_geo.translate(-20,0);
-    BateauAvale->setGeometry(new_geo);
-}
 
 void MainWindow::OnAuthentifClicked(){
     can_connect=!can_connect;

@@ -27,7 +27,9 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     vanne.cpp \
     porte.cpp \
-    eau.cpp
+    eau.cpp \
+    mainsimu.cpp \
+    maincycle.cpp
 
 HEADERS  += mainwindow.h \
     vanne.h \
