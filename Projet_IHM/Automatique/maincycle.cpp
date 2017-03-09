@@ -24,6 +24,7 @@ void MainWindow::reset()
 }
 
 
+
 void MainWindow::DebutOuvertureG(){
     qDebug("Debut ouverture vanne Gauche");
 }
@@ -46,7 +47,12 @@ void MainWindow::VanneDroiteOuverte(){
     FeuVert(ui->VertV2 , ui->RougeV2);
     _eau->Descente();
     //§ Ajouter le bateau qui descend
-    ,return;)
+    ,
+    FeuVert(ui->VertV2 , ui->RougeV2);
+    _eau->Descente();
+    ui->BtnFVav->setEnabled(true);
+    ui->BtnOVav->setEnabled(true);
+    )
 }
 
 void MainWindow::VanneGaucheOuverte(){
@@ -54,7 +60,11 @@ void MainWindow::VanneGaucheOuverte(){
     FeuVert(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
-    ,return;)
+    ,
+    FeuVert(ui->VertV1 , ui->RougeV1);
+    _eau->Monter();
+    ui->BtnFVam->setEnabled(true);
+    ui->BtnOVam->setEnabled(true);)
 }
 
 void MainWindow::VanneGaucheFermer(){
@@ -63,7 +73,18 @@ void MainWindow::VanneGaucheFermer(){
     FeuRouge(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche fermer");
     vanneDroite->Ouverture();
-    ,return;)
+    ,
+    FeuRouge(ui->VertV1 , ui->RougeV1);
+    if(_eau->avancement == 1)
+    {
+        ui->BtnFPam->setEnabled(true);
+        ui->BtnOPam->setEnabled(true);
+    }
+    else{
+    ui->BtnFPav->setEnabled(true);
+    ui->BtnOPav->setEnabled(true);
+    }
+    )
 }
 
 void MainWindow::VanneDroiteFermer(){
@@ -72,7 +93,18 @@ void MainWindow::VanneDroiteFermer(){
     qDebug("Vanne droite fermer");
     FeuRouge(ui->VertV2 , ui->RougeV2);
     vanneGauche->Ouverture();
-    ,return;)
+    ,
+    FeuRouge(ui->VertV2 , ui->RougeV2);
+    if(_eau->avancement == 0)
+    {
+        ui->BtnFPav->setEnabled(true);
+        ui->BtnFPav->setEnabled(true);
+    }
+    else{
+    ui->BtnOPam->setEnabled(true);
+    ui->BtnOPam->setEnabled(true);
+      }
+    )
 }
 
 void MainWindow::AvancementPorteDroite(double valeur){
@@ -102,7 +134,14 @@ void MainWindow::PorteDouverte(){
     ui->Bateau2->setVisible(sens);
 
     ui->PorteDroite->setVisible(false);
-    ,return;)
+    ,
+    FeuVert(ui->VertAv,ui->RougeAv);
+    FeuVert(ui->VertP2 , ui->RougeP2);
+    ui->BtnFPav->setEnabled(true);
+    ui->BtnOPav->setEnabled(true);
+    ui->BtnFVav->setEnabled(true);
+    ui->BtnOVav->setEnabled(true);
+    )
 }
 
 void MainWindow::PorteGouverte(){
@@ -117,7 +156,15 @@ void MainWindow::PorteGouverte(){
     ui->Bateau1->setVisible(!sens);
 
     ui->PorteGauche->setVisible(false);
-    ,return;)
+    ,
+
+    FeuVert(ui->VertAv,ui->RougeAv);
+    FeuVert(ui->VertP2 , ui->RougeP2);
+    ui->BtnOPam->setEnabled(true);
+    ui->BtnFPam->setEnabled(true);
+    ui->BtnOVam->setEnabled(true);
+    ui->BtnFVam->setEnabled(true);
+    )
 }
 
 void MainWindow::PorteGfermer(){
@@ -129,7 +176,17 @@ void MainWindow::PorteGfermer(){
 
     ui->PorteGauche->setVisible(true);
     vanneGauche->Fermeture();
-    ,return;)
+    ,
+    if(_eau->avancement == 1)
+    {
+        ui->BtnOPam->setEnabled(true);
+        ui->BtnFPam->setEnabled(true);
+        ui->BtnFVam->setEnabled(true);
+        ui->BtnOVam->setEnabled(true);
+        ui->BtnFVav->setEnabled(true);
+        ui->BtnOVav->setEnabled(true);
+    }
+    )
 }
 
 void MainWindow::PorteDfermer(){
@@ -141,5 +198,14 @@ void MainWindow::PorteDfermer(){
 
     ui->PorteDroite->setVisible(true);
     vanneDroite->Fermeture();
-    ,return;)
+    ,
+    if(_eau->avancement == 0)
+    {
+        ui->BtnOPav->setEnabled(true);
+        ui->BtnFPav->setEnabled(true);
+        ui->BtnFVav->setEnabled(true);
+        ui->BtnOVav->setEnabled(true);
+        ui->BtnFVam->setEnabled(true);
+        ui->BtnOVam->setEnabled(true);
+    })
 }
