@@ -75,6 +75,8 @@ MainWindow::MainWindow(QWidget *parent) :
     }else{
         mode=AUTO;
     }
+    ui->BtnFPam->setEnabled(false);
+    ui->BtnOPam->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
