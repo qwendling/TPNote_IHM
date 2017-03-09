@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->BordBas->setVisible(true);
     ui->BordBas->setEnabled(true);
+    general.setSingleShot(true);
+    QObject::connect(&general, SIGNAL(timeout()), this, SLOT(reset()));
 
     vanneDroite->start();
     vanneGauche->start();
@@ -26,7 +28,6 @@ MainWindow::MainWindow(QWidget *parent) :
     can_connect=false;
     ui->Mdp1->setVisible(can_connect);
     ui->Mdp2->setVisible(can_connect);
-
 
     //Binding des signaux associés aux vannes
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
@@ -65,16 +66,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::timerEvent(QTimerEvent *event){
-
-    int id = event->timerId();
-    if(id==general.timerId())
-    {
-        general.stop();
-        reset();
-    }
-}
-
 
 void MainWindow::reset()
 {
@@ -102,8 +93,6 @@ void MainWindow::boat_init()
     init_ui(ui->Bateau2);
     init_ui(ui->BateauMilieu);
     ui->BateauMilieu->setVisible(false);
-    porteGauche->DebutFermeture();
-    porteDroite->DebutFermeture();
 }
 
 void MainWindow::light_init()
@@ -116,17 +105,14 @@ void MainWindow::light_init()
 
 void MainWindow::on_Bateau1_clicked()
 {
-    general.stop();
-    general.start(40000,this);
+    //general.stop();
+    general.start(20000);
 
     //Affichage
     ui->Bateau2->setVisible(false);
 
     //a faire avec sender
     ui->Bateau1->setEnabled(false);
-
-    //Timer Lancement
-    general.start(40000,this);
 
     emit OuvrirVanneGauche();
 
@@ -137,16 +123,13 @@ void MainWindow::on_Bateau1_clicked()
 void MainWindow::on_Bateau2_clicked()
 {
     general.stop();
-    general.start(40000,this);
+    general.start(20000);
 
     //Affichage
     ui->Bateau1->setVisible(false);
 
     //a faire avec sender
     ui->Bateau2->setEnabled(false);
-
-    //Timer Lancement
-    general.start(30000,this);
 
     emit OuvrirVanneDroite();
     //set sens
@@ -155,8 +138,7 @@ void MainWindow::on_Bateau2_clicked()
 
 void MainWindow::on_BateauMilieu_clicked()
 {
-    general.stop();
-    general.start(40000,this);
+    general.start(20000);
 
     //a faire avec sender
     ui->BateauMilieu->setEnabled(false);

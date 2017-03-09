@@ -8,7 +8,12 @@
 #include "eau.h"
 #include <QBasicTimer>
 #include <QTimer>
-#define CHECK_RESET if(etatreset){if(--nbreset)etatreset = false;return;}
+#define CHECK_RESET if(etatreset){\
+if((--nbreset)<= 0)\
+    etatreset = false;\
+return;\
+}
+
 
 namespace Ui {
 class MainWindow;
@@ -33,7 +38,7 @@ private slots:
     void on_Bateau2_clicked();
     void on_Bateau1_clicked();
     void on_BateauMilieu_clicked();
-    void timerEvent(QTimerEvent *event);
+    //void timerEvent(QTimerEvent *event);
     void light_init();
     void boat_init();
     void on_StopButton_clicked();
@@ -83,7 +88,7 @@ private:
     QBasicTimer porte1;
     QBasicTimer porte2;
     QBasicTimer milieu;
-    QBasicTimer general;
+    QTimer general;
 
     //Sens ecluse  true->avale , false -> amont
     bool sens;
