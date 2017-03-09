@@ -22,6 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
     porteDroite->start();
     porteGauche->start();
     _eau->start();
+    can_connect=false;
+    ui->Mdp1->setVisible(can_connect);
+    ui->Mdp2->setVisible(can_connect);
+
 
     //Binding des signaux associés aux vannes
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
@@ -343,4 +347,10 @@ void MainWindow::BateauAvanceAvale()
     QRect new_geo = BateauAvale->geometry();
     new_geo.translate(-20,0);
     BateauAvale->setGeometry(new_geo);
+}
+
+void MainWindow::OnAuthentifClicked(){
+    can_connect=!can_connect;
+    ui->Mdp1->setVisible(can_connect);
+    ui->Mdp2->setVisible(can_connect);
 }

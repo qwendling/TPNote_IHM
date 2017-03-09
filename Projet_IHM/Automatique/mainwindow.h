@@ -61,6 +61,7 @@ private slots:
     void BateauDescente();
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
+    void OnAuthentifClicked();
 
 signals:
     void OuvrirVanneGauche();
@@ -72,6 +73,7 @@ private:
     Porte* porteGauche;
     Porte* porteDroite;
     Eau* _eau;
+    bool can_connect;
 
     //Timer porte
     QBasicTimer porte1;
