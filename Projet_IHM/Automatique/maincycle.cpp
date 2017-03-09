@@ -51,6 +51,7 @@ void MainWindow::VanneDroiteOuverte(){
     //§ Ajouter le bateau qui descend
     ,
     FeuVert(ui->VertV2 , ui->RougeV2);
+    FeuVert(ui->VertVDM,ui->RougeVDM);
     _eau->Descente();
     //ui->BtnFVav->setEnabled(true);
     //ui->BtnOVav->setEnabled(true);
@@ -63,6 +64,7 @@ void MainWindow::VanneGaucheOuverte(){
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
     ,
+    FeuVert(ui->VertVGM,ui->RougeVGM);
     FeuVert(ui->VertV1 , ui->RougeV1);
     _eau->Monter();
     //ui->BtnFVam->setEnabled(true);
@@ -77,6 +79,7 @@ void MainWindow::VanneGaucheFermer(){
     qDebug("Vanne gauche fermer");
     vanneDroite->Ouverture();
     ,
+    FeuRouge(ui->VertVGM,ui->RougeVGM);
     FeuRouge(ui->VertV1 , ui->RougeV1);
     if(_eau->avancement == 1)
     {
@@ -97,6 +100,7 @@ void MainWindow::VanneDroiteFermer(){
     FeuRouge(ui->VertV2 , ui->RougeV2);
     vanneGauche->Ouverture();
     ,
+    FeuRouge(ui->VertVDM,ui->RougeVDM);
     FeuRouge(ui->VertV2 , ui->RougeV2);
     if(_eau->avancement == 0)
     {

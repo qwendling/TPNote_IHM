@@ -283,6 +283,7 @@ void MainWindow::on_BtnVertAm_clicked()
 {
     FeuVert(ui->VertG,ui->RougeG);
     FeuVert(ui->VertP1,ui->RougeP1);
+    FeuVert(ui->VertGM,ui->RougeGM);
 }
 
 
@@ -291,6 +292,7 @@ void MainWindow::on_BtnRougeAm_clicked()
 {
     FeuRouge(ui->VertG,ui->RougeG);
     FeuRouge(ui->VertP1,ui->RougeP1);
+    FeuRouge(ui->VertGM,ui->RougeGM);
 }
 
 
@@ -298,6 +300,7 @@ void MainWindow::on_BtnVertAv_clicked()
 {
     FeuVert(ui->VertD,ui->RougeD);
     FeuVert(ui->VertP2,ui->RougeP2);
+    FeuVert(ui->VertDM,ui->RougeDM);
 }
 
 
@@ -305,6 +308,7 @@ void MainWindow::on_BtnRougeAv_clicked()
 {
     FeuRouge(ui->VertD,ui->RougeD);
     FeuRouge(ui->VertP2,ui->RougeP2);
+    FeuRouge(ui->VertDM,ui->RougeDM);
 }
 
 

@@ -307,7 +307,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="InterfaceManuelle">
      <widget class="QWidget" name="horizontalLayoutWidget_3">
@@ -584,49 +584,6 @@
       </property>
       <layout class="QHBoxLayout" name="PanneauAval">
        <item>
-        <layout class="QVBoxLayout" name="VanneAval">
-         <item>
-          <widget class="QLabel" name="TitreVav">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="text">
-            <string>Vanne Avale</string>
-           </property>
-           <property name="margin">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="ButtonVav">
-           <item>
-            <layout class="QHBoxLayout" name="PanneauBtnOVav">
-             <item>
-              <widget class="QPushButton" name="BtnOVav">
-               <property name="text">
-                <string>Ouverture</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="PanneauBtnFVav">
-             <item>
-              <widget class="QPushButton" name="BtnFVav">
-               <property name="text">
-                <string>Fermeture</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </item>
-       <item>
         <layout class="QVBoxLayout" name="PorteAval">
          <item>
           <widget class="QLabel" name="TitrePav">
@@ -658,6 +615,49 @@
             <layout class="QHBoxLayout" name="PanneauBtnFPav">
              <item>
               <widget class="QPushButton" name="BtnFPav">
+               <property name="text">
+                <string>Fermeture</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="VanneAval">
+         <item>
+          <widget class="QLabel" name="TitreVav">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Vanne Avale</string>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="ButtonVav">
+           <item>
+            <layout class="QHBoxLayout" name="PanneauBtnOVav">
+             <item>
+              <widget class="QPushButton" name="BtnOVav">
+               <property name="text">
+                <string>Ouverture</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="PanneauBtnFVav">
+             <item>
+              <widget class="QPushButton" name="BtnFVav">
                <property name="text">
                 <string>Fermeture</string>
                </property>
@@ -735,6 +735,184 @@
        <string>Deconnexion</string>
       </property>
      </widget>
+     <widget class="QLabel" name="RougeGM">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>260</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertGM">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>260</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RougeDM">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>260</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertDM">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>260</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBarG">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>330</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBarD">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>330</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertVGM">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>130</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="VertVDM">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>130</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RougeVGM">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>130</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RougeVDM">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>130</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>BordHautM</zorder>
      <zorder>horizontalLayoutWidget_3</zorder>
      <zorder>horizontalLayoutWidget</zorder>
@@ -746,6 +924,16 @@
      <zorder>PorteDM</zorder>
      <zorder>PorteGM</zorder>
      <zorder>pushButton</zorder>
+     <zorder>RougeGM</zorder>
+     <zorder>VertGM</zorder>
+     <zorder>RougeDM</zorder>
+     <zorder>VertDM</zorder>
+     <zorder>progressBarG</zorder>
+     <zorder>progressBarD</zorder>
+     <zorder>VertVGM</zorder>
+     <zorder>VertVDM</zorder>
+     <zorder>RougeVGM</zorder>
+     <zorder>RougeVDM</zorder>
     </widget>
     <widget class="QWidget" name="InterfaceAutomatique">
      <widget class="QWidget" name="verticalLayoutWidget">
