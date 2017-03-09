@@ -187,3 +187,8 @@ void MainWindow::OnConnexionClicked(){
             ui->APageInterface->setCurrentIndex(0);
     }
 }
+
+void MainWindow::on_BtnOVam_clicked()
+{
+
+}

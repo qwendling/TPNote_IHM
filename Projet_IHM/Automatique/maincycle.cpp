@@ -7,6 +7,7 @@
 
 void MainWindow::reset()
 {
+    CHECK_mode(
     etatreset=true;
     nbreset=4;
 
@@ -19,6 +20,7 @@ void MainWindow::reset()
     ui->PorteGauche->setVisible(true);
     light_init();
     boat_init();
+    ,return;)
 }
 
 
@@ -39,6 +41,7 @@ void MainWindow::DebutFermetureD(){
 }
 
 void MainWindow::VanneDroiteOuverte(){
+    CHECK_AUTO
     qDebug("Vanne droite ouverte");
     FeuVert(ui->VertV2 , ui->RougeV2);
     _eau->Descente();
@@ -46,6 +49,7 @@ void MainWindow::VanneDroiteOuverte(){
 }
 
 void MainWindow::VanneGaucheOuverte(){
+    CHECK_AUTO
     FeuVert(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
