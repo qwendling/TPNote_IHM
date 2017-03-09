@@ -5,6 +5,7 @@ Eau::Eau(QObject *parent) : QThread(parent)
 {
     QObject::connect(&Tavancement, SIGNAL(timeout()), this, SLOT(Intermediaire()));
     debit=0.1;
+    avancement=0;
 }
 
 void Eau::Monter(){
