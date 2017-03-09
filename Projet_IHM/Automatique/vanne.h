@@ -18,6 +18,7 @@ class Vanne : public QThread
         void FinOuverture();
         void FinFermeture();
         void Fermeture();
+        void TakeAlarme();
     protected slots:
         void run();
     private:

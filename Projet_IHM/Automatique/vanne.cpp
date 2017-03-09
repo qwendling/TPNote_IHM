@@ -36,3 +36,7 @@ void Vanne::FinFermeture(){
     CHECK_ALERT
     emit VanneFermer();
 }
+
+void Vanne::TakeAlarme(){
+    est_alerte=true;
+}

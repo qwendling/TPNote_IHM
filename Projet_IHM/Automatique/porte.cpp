@@ -45,3 +45,7 @@ void Porte::EtapeFermeture(){
     }
     emit Etat(Avancement);
 }
+
+void Porte::TakeAlarme(){
+    est_alerte=true;
+}
