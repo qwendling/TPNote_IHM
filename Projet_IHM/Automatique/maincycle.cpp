@@ -134,6 +134,12 @@ void MainWindow::PorteDouverte(){
     ui->Bateau2->setVisible(sens);
 
     ui->PorteDroite->setVisible(false);
+
+    if(sens == true)
+        BateauAvanceAvale();
+    else
+        BateauAvanceAmont();
+
     ,
     FeuVert(ui->VertAv,ui->RougeAv);
     FeuVert(ui->VertP2 , ui->RougeP2);
@@ -156,6 +162,12 @@ void MainWindow::PorteGouverte(){
     ui->Bateau1->setVisible(!sens);
 
     ui->PorteGauche->setVisible(false);
+
+    if(sens == true)
+        BateauAvanceAmont();
+    else
+        BateauAvanceAvale();
+
     ,
 
     FeuVert(ui->VertAv,ui->RougeAv);

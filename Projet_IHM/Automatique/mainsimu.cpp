@@ -58,15 +58,15 @@ void MainWindow::EauMD(double value)
 
 
 //Appellé quand l'eau du SaS monte et que le bateau est dedans
-void MainWindow::BateauMonter()
+void MainWindow::BateauMonter(QLabel* Bateau)
 {
-    QRect geo_new = BateauAvale->geometry();
+    QRect geo_new = Bateau->geometry();
     geo_new.translate(0,-10);
-    BateauAvale->setGeometry(geo_new);
+    Bateau->setGeometry(geo_new);
 }
 
 //Appellé quand l'eau du SaS descend et que le bateau est dedans
-void MainWindow::BateauDescente()
+void MainWindow::BateauDescente(QLabel* Bateau)
 {
     QRect geo_new = BateauAmont->geometry();
     geo_new.translate(0,+10);

@@ -73,8 +73,8 @@ private slots:
     void InitUi();
     void BateauAvanceAmont();
     void BateauAvanceAvale();
-    void BateauMonter();
-    void BateauDescente();
+    void BateauMonter(QLabel* Bateau);
+    void BateauDescente(QLabel* Bateau);
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
     void OnAuthentifClicked();
