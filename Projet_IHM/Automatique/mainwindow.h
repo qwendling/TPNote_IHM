@@ -53,8 +53,6 @@ private slots:
 
     void EauMD(double value);
     void PorteOF(QGraphicsView* porte , float value , IdPorte::enumId idporte);
-    void EauSASmonte();
-    void EauSASdescend();
     void InitUi();
     void BateauAvanceAmont();
     void BateauAvanceAvale();

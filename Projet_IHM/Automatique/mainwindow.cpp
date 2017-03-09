@@ -293,35 +293,6 @@ void MainWindow::EauMD(double value)
     EauSaS->setGeometry(geo_new);
 }
 
-//8 tick de fonction pour que l'eau soit a niveau
-void MainWindow::EauSASmonte()
-{
-     QRect geo_new = EauSaS->geometry();
-
-    //QRect geo_bateau = bateau->geometry();
-     //scale
-     geo_new.setHeight(geo_new.height()+10);
-
-     //geo_bateau.translate(0,-10);
-     //translation parce que scale par rapport a en haut
-     geo_new.translate(0,-10);
-     EauSaS->setGeometry(geo_new);
-}
-
-
-//8 tick de fonction pour que l'eau soit a niveau
-void MainWindow::EauSASdescend()
-{
-     QRect geo_new = EauSaS->geometry();
-
-     //scale
-     geo_new.setHeight(geo_new.height()-10);
-
-     //geo_bateau.translate(0,+10);
-     //translation parce que scale par rapport a en haut
-     geo_new.translate(0,+10);
-     EauSaS->setGeometry(geo_new);
-}
 
 
 //Appellé quand l'eau du SaS monte et que le bateau est dedans
