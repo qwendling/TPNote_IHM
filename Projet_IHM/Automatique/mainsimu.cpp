@@ -13,8 +13,8 @@ void MainWindow::InitUi()
     BateauAvale->setGeometry(540,110,91,81);
 
     //Cache
-    BateauAmont->setVisible(false);
-    BateauAvale->setVisible(false);
+    BateauAmont->setVisible(true);
+    BateauAvale->setVisible(true);
 }
 
 void MainWindow::FeuVert(QLabel* vert , QLabel* rouge)
