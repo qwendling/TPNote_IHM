@@ -50,8 +50,8 @@ void MainWindow::VanneDroiteOuverte(){
     ,
     FeuVert(ui->VertV2 , ui->RougeV2);
     _eau->Descente();
-    ui->BtnFVav->setEnabled(true);
-    ui->BtnOVav->setEnabled(true);
+    //ui->BtnFVav->setEnabled(true);
+    //ui->BtnOVav->setEnabled(true);
     )
 }
 
@@ -63,8 +63,9 @@ void MainWindow::VanneGaucheOuverte(){
     ,
     FeuVert(ui->VertV1 , ui->RougeV1);
     _eau->Monter();
-    ui->BtnFVam->setEnabled(true);
-    ui->BtnOVam->setEnabled(true);)
+    //ui->BtnFVam->setEnabled(true);
+    //ui->BtnOVam->setEnabled(true);
+    )
 }
 
 void MainWindow::VanneGaucheFermer(){
@@ -212,10 +213,12 @@ void MainWindow::PorteDfermer(){
 
 void MainWindow::FiniMonter(){
     CHECK_mode(porteGauche->DebutOuverture();
-                ,return;)
+                ,ui->BtnFVam->setEnabled(true);
+    ui->BtnOVam->setEnabled(true);)
 }
 
 void MainWindow::FiniDesc(){
     CHECK_mode(porteDroite->DebutOuverture();
-                ,return;)
+                ,ui->BtnFVav->setEnabled(true);
+    ui->BtnOVav->setEnabled(true);)
 }
