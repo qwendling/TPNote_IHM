@@ -353,20 +353,28 @@ void MainWindow::on_BugVav_clicked()
 
 void MainWindow::AlarmePG(){
     qDebug("Probleme Porte Gauche");
+    ui->BtnFPam->setStyleSheet("background-color : red");
+    ui->BtnOPam->setStyleSheet("background-color : red");
     on_StopButton_clicked();
 }
 
 void MainWindow::AlarmePD(){
     qDebug("Probleme Porte Droite");
+    ui->BtnFPav->setStyleSheet("background-color : red");
+    ui->BtnOPav->setStyleSheet("background-color : red");
     on_StopButton_clicked();
 }
 
 void MainWindow::AlarmeVD(){
     qDebug("Probleme Vanne Droite");
+    ui->BtnFVav->setStyleSheet("background-color : red");
+    ui->BtnOVav->setStyleSheet("background-color : red");
     on_StopButton_clicked();
 }
 
 void MainWindow::AlarmeVG(){
     qDebug("Probleme Vanne Gauche");
+    ui->BtnFVam->setStyleSheet("background-color : red");
+    ui->BtnOVam->setStyleSheet("background-color : red");
     on_StopButton_clicked();
 }
