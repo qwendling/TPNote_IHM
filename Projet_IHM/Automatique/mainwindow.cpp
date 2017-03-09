@@ -192,38 +192,38 @@ void MainWindow::OnConnexionClicked(){
 
 void MainWindow::on_BtnOVam_clicked()
 {
-
+    vanneGauche->Ouverture();
 }
 
 void MainWindow::on_BtnFVam_clicked()
 {
-
+    vanneGauche->Fermeture();
 }
 
 void MainWindow::on_BtnOPam_clicked()
 {
-
+    porteGauche->DebutOuverture();
 }
 
 
 
 void MainWindow::on_BtnFPam_clicked()
 {
-
+    porteGauche->DebutFermeture();
 }
 
 
 
 void MainWindow::on_BtnOVav_clicked()
 {
-
+    vanneDroite->Ouverture();
 }
 
 
 
 void MainWindow::on_BtnFVav_clicked()
 {
-
+    vanneDroite->Fermeture();
 }
 
 
@@ -231,40 +231,44 @@ void MainWindow::on_BtnFVav_clicked()
 
 void MainWindow::on_BtnOPav_clicked()
 {
-
+    porteDroite->DebutOuverture();
 }
 
 
 
 void MainWindow::on_BtnFPav_clicked()
 {
-
+    porteDroite->DebutFermeture();
 }
 
 
 
 void MainWindow::on_BtnVertAm_clicked()
 {
-
+    FeuVert(ui->VertG,ui->RougeG);
+    FeuVert(ui->VertP1,ui->RougeP1);
 }
 
 
 
 void MainWindow::on_BtnRougeAm_clicked()
 {
-
+    FeuRouge(ui->VertG,ui->RougeG);
+    FeuRouge(ui->VertP1,ui->RougeP1);
 }
 
 
 void MainWindow::on_BtnVertAv_clicked()
 {
-
+    FeuVert(ui->VertD,ui->RougeD);
+    FeuVert(ui->VertP2,ui->RougeP2);
 }
 
 
 void MainWindow::on_BtnRougeAv_clicked()
 {
-
+    FeuRouge(ui->VertD,ui->RougeD);
+    FeuRouge(ui->VertP2,ui->RougeP2);
 }
 
 
