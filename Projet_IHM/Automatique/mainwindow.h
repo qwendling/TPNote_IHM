@@ -14,7 +14,10 @@ if((--nbreset)<= 0)\
     etatreset = false;\
 return;\
 }
+#define MANUELLE true
+#define AUTO false
 
+#define CHECK_mode(a,b) if(mode == AUTO){a}else{b}
 
 namespace Ui {
 class MainWindow;
@@ -74,6 +77,8 @@ private slots:
     void OnAuthentifClicked();
     void OnConnexionClicked();
 
+    void on_BtnOVam_clicked();
+
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();
@@ -89,6 +94,7 @@ private:
     Porte* porteDroite;
     Eau* _eau;
     bool can_connect;
+    bool mode;
 
     //Timer porte
     QBasicTimer porte1;

@@ -181,6 +181,9 @@ void MainWindow::OnConnexionClicked(){
     //Mdp : ihmmdp
     QString s="ac525c20df8218b09888994085a165e2";
     if(s == QString(QCryptographicHash::hash((ui->Mdp2->property("text").toString().toUtf8()),QCryptographicHash::Md5).toHex())){
-        qDebug("Cool");
+        if(ui->APageInterface->currentIndex() == 0)
+            ui->APageInterface->setCurrentIndex(1);
+        else
+            ui->APageInterface->setCurrentIndex(0);
     }
 }
