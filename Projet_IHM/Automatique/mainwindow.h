@@ -45,7 +45,6 @@ private slots:
     void on_Bateau2_clicked();
     void on_Bateau1_clicked();
     void on_BateauMilieu_clicked();
-    //void timerEvent(QTimerEvent *event);
     void light_init();
     void boat_init();
     void on_StopButton_clicked();

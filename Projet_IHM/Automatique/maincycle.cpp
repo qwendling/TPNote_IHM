@@ -48,13 +48,10 @@ void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
     FeuVert(ui->VertV2 , ui->RougeV2);
     _eau->Descente();
-    //§ Ajouter le bateau qui descend
     ,
     FeuVert(ui->VertV2 , ui->RougeV2);
     FeuVert(ui->VertVDM,ui->RougeVDM);
     _eau->Descente();
-    //ui->BtnFVav->setEnabled(true);
-    //ui->BtnOVav->setEnabled(true);
     )
 }
 
@@ -67,8 +64,6 @@ void MainWindow::VanneGaucheOuverte(){
     FeuVert(ui->VertVGM,ui->RougeVGM);
     FeuVert(ui->VertV1 , ui->RougeV1);
     _eau->Monter();
-    //ui->BtnFVam->setEnabled(true);
-    //ui->BtnOVam->setEnabled(true);
     )
 }
 
@@ -142,13 +137,8 @@ void MainWindow::PorteDouverte(){
 
     ui->PorteDroite->setVisible(false);
 
-    /*if(sens == true)
-        BateauAvanceAvale();
-    else
-        BateauAvanceAmont();*/
-
     ,
-    FeuVert(ui->VertAv,ui->RougeAv);
+    FeuVert(ui->VertDM,ui->RougeDM);
     FeuVert(ui->VertP2 , ui->RougeP2);
     ui->BtnFPav->setEnabled(true);
     ui->BtnOPav->setEnabled(true);
@@ -170,15 +160,10 @@ void MainWindow::PorteGouverte(){
 
     ui->PorteGauche->setVisible(false);
 
-    /*if(sens == true)
-        BateauAvanceAmont();
-    else
-        BateauAvanceAvale();*/
-
     ,
 
-    FeuVert(ui->VertAv,ui->RougeAv);
-    FeuVert(ui->VertP2 , ui->RougeP2);
+    FeuVert(ui->VertGM,ui->RougeGM);
+    FeuVert(ui->VertP1 , ui->RougeP1);
     ui->BtnOPam->setEnabled(true);
     ui->BtnFPam->setEnabled(true);
     ui->BtnOVam->setEnabled(true);
@@ -196,6 +181,9 @@ void MainWindow::PorteGfermer(){
     ui->PorteGauche->setVisible(true);
     vanneGauche->Fermeture();
     ,
+
+    FeuRouge(ui->VertGM , ui->RougeGM);
+    FeuRouge(ui->VertP1 , ui->RougeP1);
     if(_eau->avancement == 1)
     {
         ui->BtnOPam->setEnabled(true);
@@ -218,6 +206,8 @@ void MainWindow::PorteDfermer(){
     ui->PorteDroite->setVisible(true);
     vanneDroite->Fermeture();
     ,
+    FeuRouge(ui->VertDM , ui->RougeDM);
+    FeuRouge(ui->VertP2 , ui->RougeP2);
     if(_eau->avancement == 0)
     {
         ui->BtnOPav->setEnabled(true);

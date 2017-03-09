@@ -4,7 +4,6 @@
 #include <QDebug>
 #include <QPixmap>
 
-//§ Pour auto : bouton rouge, authentif + gestion bug/alarme
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -120,7 +119,6 @@ void MainWindow::on_Bateau1_clicked()
     //Affichage
     ui->Bateau2->setVisible(false);
 
-    //a faire avec sender
     ui->Bateau1->setEnabled(false);
 
     emit OuvrirVanneGauche();
@@ -136,7 +134,6 @@ void MainWindow::on_Bateau2_clicked()
     //Affichage
     ui->Bateau1->setVisible(false);
 
-    //a faire avec sender
     ui->Bateau2->setEnabled(false);
 
     emit OuvrirVanneDroite();
@@ -149,10 +146,8 @@ void MainWindow::on_BateauMilieu_clicked()
     general.stop();
     general.start(40000);
 
-    //a faire avec sender
     ui->BateauMilieu->setEnabled(false);
 
-    //light_init();
     FeuRouge(ui->VertD,ui->RougeD);
     FeuRouge(ui->VertG,ui->RougeG);
     FeuRouge(ui->VertP1,ui->RougeP1);
@@ -248,6 +243,7 @@ void MainWindow::on_BtnOPam_clicked()
 void MainWindow::on_BtnFPam_clicked()
 {
     DisableBtn();
+    FeuRouge(ui->VertP1,ui->RougeP1);
     porteGauche->DebutFermeture();
 }
 
@@ -281,6 +277,7 @@ void MainWindow::on_BtnOPav_clicked()
 void MainWindow::on_BtnFPav_clicked()
 {
     DisableBtn();
+    FeuRouge(ui->VertP2,ui->RougeP2);
     porteDroite->DebutFermeture();
 }
 

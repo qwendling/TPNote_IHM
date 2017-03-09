@@ -913,6 +913,8 @@
        <bool>true</bool>
       </property>
      </widget>
+     <zorder>VertDM</zorder>
+     <zorder>VertGM</zorder>
      <zorder>BordHautM</zorder>
      <zorder>horizontalLayoutWidget_3</zorder>
      <zorder>horizontalLayoutWidget</zorder>
@@ -925,9 +927,7 @@
      <zorder>PorteGM</zorder>
      <zorder>pushButton</zorder>
      <zorder>RougeGM</zorder>
-     <zorder>VertGM</zorder>
      <zorder>RougeDM</zorder>
-     <zorder>VertDM</zorder>
      <zorder>progressBarG</zorder>
      <zorder>progressBarD</zorder>
      <zorder>VertVGM</zorder>
