@@ -33,6 +33,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->Mdp1->setVisible(can_connect);
     ui->Mdp2->setVisible(can_connect);
 
+    QObject::connect(vanneDroite, SIGNAL(Alarme()), this, SLOT(AlarmeVD()));
+    QObject::connect(vanneGauche, SIGNAL(Alarme()), this, SLOT(AlarmeVG()));
+    QObject::connect(porteDroite, SIGNAL(Alarme()), this, SLOT(AlarmePD()));
+    QObject::connect(porteGauche, SIGNAL(Alarme()), this, SLOT(AlarmePG()));
+
     //Binding des signaux associés aux vannes
     QObject::connect(vanneDroite, SIGNAL(VanneOuverte()), this, SLOT(VanneDroiteOuverte()));
     QObject::connect(vanneGauche, SIGNAL(VanneOuverte()), this, SLOT(VanneGaucheOuverte()));
@@ -324,4 +329,44 @@ void MainWindow::on_pushButton_clicked()
         mode=MANUELLE;
     }
 
+}
+
+void MainWindow::on_BugVam_clicked()
+{
+    vanneGauche->bug();
+}
+
+void MainWindow::on_BugPam_clicked()
+{
+    porteGauche->bug();
+}
+
+void MainWindow::on_BugPav_clicked()
+{
+    porteDroite->bug();
+}
+
+void MainWindow::on_BugVav_clicked()
+{
+    vanneDroite->bug();
+}
+
+void MainWindow::AlarmePG(){
+    qDebug("Probleme Porte Gauche");
+    on_StopButton_clicked();
+}
+
+void MainWindow::AlarmePD(){
+    qDebug("Probleme Porte Droite");
+    on_StopButton_clicked();
+}
+
+void MainWindow::AlarmeVD(){
+    qDebug("Probleme Vanne Droite");
+    on_StopButton_clicked();
+}
+
+void MainWindow::AlarmeVG(){
+    qDebug("Probleme Vanne Gauche");
+    on_StopButton_clicked();
 }

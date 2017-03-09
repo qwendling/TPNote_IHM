@@ -99,6 +99,19 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_BugVam_clicked();
+
+    void on_BugPam_clicked();
+
+    void on_BugPav_clicked();
+
+    void on_BugVav_clicked();
+
+    void AlarmePG();
+    void AlarmePD();
+    void AlarmeVD();
+    void AlarmeVG();
+
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();
