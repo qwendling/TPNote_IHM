@@ -307,7 +307,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="InterfaceManuelle">
      <widget class="QWidget" name="horizontalLayoutWidget_3">
@@ -843,7 +843,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="images.qrc">
+       <iconset>
         <normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</iconset>
       </property>
       <property name="iconSize">
@@ -1119,7 +1119,7 @@
      <x>0</x>
      <y>0</y>
      <width>1499</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -1136,7 +1136,6 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="../Simulation/image.qrc"/>
-  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>

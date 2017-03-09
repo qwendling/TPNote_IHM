@@ -48,4 +48,6 @@ void Porte::EtapeFermeture(){
 
 void Porte::TakeAlarme(){
     est_alerte=true;
+    Tfermeture.stop();
+    Touverture.stop();
 }

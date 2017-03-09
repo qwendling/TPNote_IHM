@@ -39,4 +39,6 @@ void Vanne::FinFermeture(){
 
 void Vanne::TakeAlarme(){
     est_alerte=true;
+    Tfermeture.stop();
+    Touverture.stop();
 }

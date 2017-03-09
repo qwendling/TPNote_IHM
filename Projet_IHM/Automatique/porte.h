@@ -29,6 +29,7 @@ signals:
     void Etat(double);
     void Ouvert();
     void Fermer();
+    void Alarme();
 
 };
 
