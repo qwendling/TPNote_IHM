@@ -735,6 +735,17 @@
        <string>Deconnexion</string>
       </property>
      </widget>
+     <zorder>BordHautM</zorder>
+     <zorder>horizontalLayoutWidget_3</zorder>
+     <zorder>horizontalLayoutWidget</zorder>
+     <zorder>horizontalLayoutWidget_6</zorder>
+     <zorder>CommandeDebug</zorder>
+     <zorder>StopButtonM</zorder>
+     <zorder>BorsBasM</zorder>
+     <zorder>horizontalLayoutWidget_2</zorder>
+     <zorder>PorteDM</zorder>
+     <zorder>PorteGM</zorder>
+     <zorder>pushButton</zorder>
     </widget>
     <widget class="QWidget" name="InterfaceAutomatique">
      <widget class="QWidget" name="verticalLayoutWidget">
