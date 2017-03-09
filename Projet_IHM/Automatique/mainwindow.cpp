@@ -190,18 +190,37 @@ void MainWindow::OnConnexionClicked(){
 
 //BoutonManuelle
 
+void MainWindow::DisableBtn(){
+    ui->BtnFPam->setEnabled(false);
+    ui->BtnFPav->setEnabled(false);
+    ui->BtnFVam->setEnabled(false);
+    ui->BtnFVav->setEnabled(false);
+    ui->BtnOPam->setEnabled(false);
+    ui->BtnOPav->setEnabled(false);
+    ui->BtnOVam->setEnabled(false);
+    ui->BtnOVav->setEnabled(false);
+    ui->ButtonPam->setEnabled(false);
+    ui->ButtonPav->setEnabled(false);
+    ui->ButtonVam->setEnabled(false);
+    ui->ButtonVav->setEnabled(false);
+}
+
+
 void MainWindow::on_BtnOVam_clicked()
 {
+    DisableBtn();
     vanneGauche->Ouverture();
 }
 
 void MainWindow::on_BtnFVam_clicked()
 {
+    DisableBtn();
     vanneGauche->Fermeture();
 }
 
 void MainWindow::on_BtnOPam_clicked()
 {
+    DisableBtn();
     porteGauche->DebutOuverture();
 }
 
@@ -209,6 +228,7 @@ void MainWindow::on_BtnOPam_clicked()
 
 void MainWindow::on_BtnFPam_clicked()
 {
+    DisableBtn();
     porteGauche->DebutFermeture();
 }
 
@@ -216,6 +236,7 @@ void MainWindow::on_BtnFPam_clicked()
 
 void MainWindow::on_BtnOVav_clicked()
 {
+    DisableBtn();
     vanneDroite->Ouverture();
 }
 
@@ -223,6 +244,7 @@ void MainWindow::on_BtnOVav_clicked()
 
 void MainWindow::on_BtnFVav_clicked()
 {
+    DisableBtn();
     vanneDroite->Fermeture();
 }
 
@@ -231,6 +253,7 @@ void MainWindow::on_BtnFVav_clicked()
 
 void MainWindow::on_BtnOPav_clicked()
 {
+    DisableBtn();
     porteDroite->DebutOuverture();
 }
 
@@ -238,6 +261,7 @@ void MainWindow::on_BtnOPav_clicked()
 
 void MainWindow::on_BtnFPav_clicked()
 {
+    DisableBtn();
     porteDroite->DebutFermeture();
 }
 
