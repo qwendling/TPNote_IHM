@@ -43,6 +43,7 @@ public slots:
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
     void Porte(QGraphicsView* porte, float value, IdPorte::enumId idporte);
+    void Eau(float value);
 
     private slots:
     void on_pushButton1_clicked();

@@ -73,6 +73,8 @@ void MainWindow::FermeturePorte(QGraphicsView* porte){
 }
 
 
+
+
 //8 tick de fonction pour que l'eau soit a niveau
 void MainWindow::EauSASmonte()
 {
@@ -157,35 +159,49 @@ void MainWindow::Porte(QGraphicsView* porte , float value , IdPorte::enumId idpo
 }
 
 
+
+
+void MainWindow::Eau(float value)
+{
+    QRect geo_new = EauSaS->geometry();
+    //scale
+    //geo_new.setHeight(geo_new.height()-10);
+    geo_new.setTop(190-(value*80));
+    EauSaS->setGeometry(geo_new);
+
+
+
+}
+
 //Bouton Test
 
 
 void MainWindow::on_pushButton1_clicked()
 {
-    Porte(ui->Porte1 , 0 , IdPorte::Gauche);
+    Eau(0);
 }
 
 void MainWindow::on_Etap2_clicked()
 {
-    Porte(ui->Porte1 , 0.5 , IdPorte::Gauche);
+    Eau(1);
 }
 
 void MainWindow::on_pushButton3_clicked()
 {
-    Porte(ui->Porte1 , 1. , IdPorte::Gauche);
+    Eau(0.5);
 }
 
 void MainWindow::on_Etape1_clicked()
 {
-    Porte(ui->Porte2 , 0 , IdPorte::Droite);
+    Eau(0.2);
 }
 
 void MainWindow::on_Etape1_2_clicked()
 {
-     Porte(ui->Porte2 , 0.5 , IdPorte::Droite);
+      Eau(0.6);
 }
 
 void MainWindow::on_Etape1_3_clicked()
 {
-    Porte(ui->Porte2 , 1. , IdPorte::Droite);
+    Eau(0.8);
 }
