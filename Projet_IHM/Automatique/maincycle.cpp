@@ -58,17 +58,21 @@ void MainWindow::VanneGaucheOuverte(){
 }
 
 void MainWindow::VanneGaucheFermer(){
+    CHECK_mode(
     CHECK_RESET
     FeuRouge(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche fermer");
     vanneDroite->Ouverture();
+    ,return;)
 }
 
 void MainWindow::VanneDroiteFermer(){
+    CHECK_mode(
     CHECK_RESET
     qDebug("Vanne droite fermer");
     FeuRouge(ui->VertV2 , ui->RougeV2);
     vanneGauche->Ouverture();
+    ,return;)
 }
 
 void MainWindow::AvancementPorteDroite(double valeur){
@@ -86,6 +90,7 @@ void MainWindow::AvancementPorteGauche(double valeur){
 }
 
 void MainWindow::PorteDouverte(){
+    CHECK_mode(
     qDebug("Porte droite ouverte");
     //Affichage feu
     FeuVert(ui->VertD,ui->RougeD);
@@ -97,9 +102,11 @@ void MainWindow::PorteDouverte(){
     ui->Bateau2->setVisible(sens);
 
     ui->PorteDroite->setVisible(false);
+    ,return;)
 }
 
 void MainWindow::PorteGouverte(){
+    CHECK_mode(
     qDebug("Porte gauche ouverte");
     //Affichage feu
     FeuVert(ui->VertG,ui->RougeG);
@@ -110,9 +117,11 @@ void MainWindow::PorteGouverte(){
     ui->Bateau1->setVisible(!sens);
 
     ui->PorteGauche->setVisible(false);
+    ,return;)
 }
 
 void MainWindow::PorteGfermer(){
+    CHECK_mode(
     CHECK_RESET
     qDebug("Porte gauche fermer");
     FeuRouge(ui->VertG,ui->RougeG);
@@ -120,9 +129,11 @@ void MainWindow::PorteGfermer(){
 
     ui->PorteGauche->setVisible(true);
     vanneGauche->Fermeture();
+    ,return;)
 }
 
 void MainWindow::PorteDfermer(){
+    CHECK_mode(
     CHECK_RESET
     qDebug("Porte droit fermer");
     FeuRouge(ui->VertD,ui->RougeD);
@@ -130,4 +141,5 @@ void MainWindow::PorteDfermer(){
 
     ui->PorteDroite->setVisible(true);
     vanneDroite->Fermeture();
+    ,return;)
 }
