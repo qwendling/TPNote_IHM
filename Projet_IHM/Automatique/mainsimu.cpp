@@ -8,9 +8,6 @@
 
 void MainWindow::InitUi()
 {
-    //Init Place
-    BateauAmont->setGeometry(120,30,91,81);
-    BateauAvale->setGeometry(540,110,91,81);
 
     //Cache
     BateauAmont->setVisible(true);
@@ -51,6 +48,8 @@ void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte::enumId id
 void MainWindow::EauMD(double value)
 {
     QRect geo_new = EauSaS->geometry();
+
+
     geo_new.setTop(250-(value*80));
     EauSaS->setGeometry(geo_new);
 }
@@ -68,16 +67,17 @@ void MainWindow::BateauMonter(QLabel* Bateau)
 //Appellé quand l'eau du SaS descend et que le bateau est dedans
 void MainWindow::BateauDescente(QLabel* Bateau)
 {
-    QRect geo_new = BateauAmont->geometry();
+    QRect geo_new = Bateau->geometry();
     geo_new.translate(0,+10);
-    BateauAmont->setGeometry(geo_new);
+    Bateau->setGeometry(geo_new);
 }
 
 //10 tick de fonction pour etre au SaS
 void MainWindow::BateauAvanceAmont()
 {
+
     QRect new_geo = BateauAmont->geometry();
-    new_geo.translate(20,0);
+    new_geo.translate(200,0);
     BateauAmont->setGeometry(new_geo);
 }
 
@@ -85,6 +85,6 @@ void MainWindow::BateauAvanceAmont()
 void MainWindow::BateauAvanceAvale()
 {
     QRect new_geo = BateauAvale->geometry();
-    new_geo.translate(-20,0);
+    new_geo.translate(-200,0);
     BateauAvale->setGeometry(new_geo);
 }
