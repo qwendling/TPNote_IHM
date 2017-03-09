@@ -15,7 +15,8 @@ void MainWindow::reset()
     porteDroite-> DebutFermeture();
     porteGauche->DebutFermeture();
 
-
+    ui->PorteDroite->setVisible(true);
+    ui->PorteGauche->setVisible(true);
     light_init();
     boat_init();
 }
@@ -29,19 +30,37 @@ void MainWindow::DebutOuvertureD(){
     qDebug("Debut ouverture vanne Droite");
 }
 
+void MainWindow::DebutFermetureG(){
+    qDebug("Debut fermeture vanne Gauche");
+}
 
+void MainWindow::DebutFermetureD(){
+    qDebug("Debut fermeture vanne Droite");
+}
 
 void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
     FeuVert(ui->VertV2 , ui->RougeV2);
-    porteDroite->DebutOuverture();
+    _eau->Descente();
+    //§ Ajouter le bateau qui descend
 }
 
 void MainWindow::VanneGaucheOuverte(){
     FeuVert(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
-    porteGauche->DebutOuverture();
+}
+
+void MainWindow::VanneGaucheFermer(){
+    FeuRouge(ui->VertV1 , ui->RougeV1);
+    qDebug("Vanne gauche fermer");
+    vanneDroite->Ouverture();
+}
+
+void MainWindow::VanneDroiteFermer(){
+    qDebug("Vanne droite fermer");
+    FeuRouge(ui->VertV2 , ui->RougeV2);
+    porteDroite->DebutOuverture();
 }
 
 void MainWindow::AvancementPorteDroite(double valeur){
@@ -92,7 +111,7 @@ void MainWindow::PorteGfermer(){
     FeuRouge(ui->VertP1 , ui->RougeP1);
 
     ui->PorteGauche->setVisible(true);
-    porteDroite->DebutOuverture();
+    vanneGauche->Fermeture();
 }
 
 void MainWindow::PorteDfermer(){

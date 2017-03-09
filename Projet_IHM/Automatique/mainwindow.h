@@ -45,8 +45,12 @@ private slots:
     void init_ui(QPushButton* item);
     void VanneDroiteOuverte();
     void VanneGaucheOuverte();
+    void VanneDroiteFermer();
+    void VanneGaucheFermer();
     void DebutOuvertureG();
     void DebutOuvertureD();
+    void DebutFermetureG();
+    void DebutFermetureD();
     void AvancementPorteGauche(double);
     void AvancementPorteDroite(double);
     void PorteGouverte();

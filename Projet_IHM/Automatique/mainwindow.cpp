@@ -35,6 +35,12 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(vanneGauche, SIGNAL(DebutOuverture()), this, SLOT(DebutOuvertureG()));
     QObject::connect(vanneDroite, SIGNAL(DebutOuverture()), this, SLOT(DebutOuvertureD()));
 
+    QObject::connect(vanneGauche, SIGNAL(DebutFermeture()), this, SLOT(DebutFermetureG()));
+    QObject::connect(vanneDroite, SIGNAL(DebutFermeture()), this, SLOT(DebutFermetureD()));
+
+    QObject::connect(vanneDroite, SIGNAL(VanneFermer()), this, SLOT(VanneDroiteFermer()));
+    QObject::connect(vanneGauche, SIGNAL(VanneFermer()), this, SLOT(VanneGaucheFermer()));
+
     QObject::connect(this, SIGNAL(OuvrirVanneGauche()), vanneGauche, SLOT(Ouverture()));
     QObject::connect(this, SIGNAL(OuvrirVanneDroite()), vanneDroite, SLOT(Ouverture()));
 
@@ -49,6 +55,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Binding des signaux pour eau
     QObject::connect(_eau, SIGNAL(Etat(double)) , this , SLOT(EauMD(double)));
+    QObject::connect(_eau, SIGNAL(estEnHaut()) , porteGauche , SLOT(DebutOuverture()));
+    QObject::connect(_eau, SIGNAL(estEnBas()) , porteDroite , SLOT(DebutOuverture()));
 
     //Init affichage
     ui->BateauMilieu->setVisible(false);
@@ -81,10 +89,12 @@ void MainWindow::boat_init()
 
 void MainWindow::light_init()
 {
-   ui->RougeG->setVisible(true);
-   ui->RougeD->setVisible(true);
-   ui->VertG->setVisible(false);
-   ui->VertD->setVisible(false);
+   FeuRouge(ui->VertG,ui->RougeG);
+   FeuRouge(ui->VertD,ui->RougeD);
+   FeuRouge(ui->VertP1,ui->RougeP1);
+   FeuRouge(ui->VertP2,ui->RougeP2);
+   FeuRouge(ui->VertV1,ui->RougeV1);
+   FeuRouge(ui->VertV2,ui->RougeV2);
 }
 
 void MainWindow::on_Bateau1_clicked()
@@ -128,6 +138,8 @@ void MainWindow::on_BateauMilieu_clicked()
     ui->BateauMilieu->setEnabled(false);
 
     light_init();
+    FeuRouge(ui->VertP1,ui->RougeP1);
+    FeuRouge(ui->VertP2,ui->RougeP2);
 
     if(sens){
         porteGauche->DebutFermeture();

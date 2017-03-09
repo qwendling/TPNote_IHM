@@ -31,7 +31,7 @@ void Eau::Intermediaire(){
     snprintf(s,128,"%lf",avancement);
     qDebug(s);
     emit Etat(avancement);
-    if(avancement < debitEffectif){
+    if(avancement < (-debitEffectif)){
         avancement = 0;
         emit estEnBas();
         Tavancement.stop();
