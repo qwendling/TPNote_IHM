@@ -176,3 +176,11 @@ void MainWindow::OnAuthentifClicked(){
     ui->Mdp1->setVisible(can_connect);
     ui->Mdp2->setVisible(can_connect);
 }
+
+void MainWindow::OnConnexionClicked(){
+    //Mdp : ihmmdp
+    QString s="ac525c20df8218b09888994085a165e2";
+    if(s == QString(QCryptographicHash::hash((ui->Mdp2->property("text").toString().toUtf8()),QCryptographicHash::Md5).toHex())){
+        qDebug("Cool");
+    }
+}

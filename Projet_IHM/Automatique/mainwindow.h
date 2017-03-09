@@ -8,6 +8,7 @@
 #include "eau.h"
 #include <QBasicTimer>
 #include <QTimer>
+#include <QCryptographicHash>
 #define CHECK_RESET if(etatreset){\
 if((--nbreset)<= 0)\
     etatreset = false;\
@@ -71,6 +72,7 @@ private slots:
     void FeuVert(QLabel* vert , QLabel* rouge);
     void FeuRouge(QLabel* vert , QLabel* rouge);
     void OnAuthentifClicked();
+    void OnConnexionClicked();
 
 signals:
     void OuvrirVanneGauche();

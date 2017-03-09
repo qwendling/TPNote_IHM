@@ -730,12 +730,12 @@
         <x>620</x>
         <y>30</y>
         <width>131</width>
-        <height>124</height>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="Mdp">
        <item>
-        <widget class="QTextEdit" name="Mdp2"/>
+        <widget class="QLineEdit" name="Mdp2"/>
        </item>
        <item>
         <widget class="QPushButton" name="Mdp1">
@@ -819,7 +819,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="images.qrc">
+       <iconset>
         <normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</iconset>
       </property>
       <property name="iconSize">
@@ -1095,7 +1095,7 @@
      <x>0</x>
      <y>0</y>
      <width>1499</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -1112,7 +1112,6 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="../Simulation/image.qrc"/>
-  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -1131,9 +1130,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>Mdp1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>OnConnexionClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>on_Bateau_clicked()</slot>
   <slot>OnAuthentifClicked()</slot>
+  <slot>OnConnexionClicked()</slot>
  </slots>
 </ui>
