@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     porteGauche(new Porte),
     _eau(new Eau)
 {
+    etatreset=false;
     ui->setupUi(this);
     ui->BordBas->setVisible(true);
     ui->BordBas->setEnabled(true);
@@ -69,12 +70,26 @@ void MainWindow::timerEvent(QTimerEvent *event){
     int id = event->timerId();
     if(id==general.timerId())
     {
-        light_init();
-        boat_init();
         general.stop();
+        reset();
     }
 }
 
+
+void MainWindow::reset()
+{
+    etatreset=true;
+    nbreset=2;
+
+    vanneDroite->Fermeture();
+    vanneGauche->Fermeture();
+    porteDroite-> DebutFermeture();
+    porteGauche->DebutFermeture();
+
+
+    light_init();
+    boat_init();
+}
 
 void MainWindow::init_ui(QPushButton* item){
     item->setVisible(true);
@@ -101,6 +116,9 @@ void MainWindow::light_init()
 
 void MainWindow::on_Bateau1_clicked()
 {
+    general.stop();
+    general.start(40000,this);
+
     //Affichage
     ui->Bateau2->setVisible(false);
 
@@ -118,6 +136,9 @@ void MainWindow::on_Bateau1_clicked()
 
 void MainWindow::on_Bateau2_clicked()
 {
+    general.stop();
+    general.start(40000,this);
+
     //Affichage
     ui->Bateau1->setVisible(false);
 
@@ -134,6 +155,9 @@ void MainWindow::on_Bateau2_clicked()
 
 void MainWindow::on_BateauMilieu_clicked()
 {
+    general.stop();
+    general.start(40000,this);
+
     //a faire avec sender
     ui->BateauMilieu->setEnabled(false);
 
@@ -170,6 +194,8 @@ void MainWindow::DebutOuvertureG(){
 void MainWindow::DebutOuvertureD(){
     qDebug("Debut ouverture vanne Droite");
 }
+
+
 
 void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
@@ -226,6 +252,7 @@ void MainWindow::PorteGouverte(){
 }
 
 void MainWindow::PorteGfermer(){
+    CHECK_RESET
     qDebug("Porte gauche fermer");
     FeuRouge(ui->VertG,ui->RougeG);
     FeuRouge(ui->VertP1 , ui->RougeP1);
@@ -235,6 +262,7 @@ void MainWindow::PorteGfermer(){
 }
 
 void MainWindow::PorteDfermer(){
+    CHECK_RESET
     qDebug("Porte droit fermer");
     FeuRouge(ui->VertD,ui->RougeD);
     FeuRouge(ui->VertP2 , ui->RougeP2);

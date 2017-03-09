@@ -8,6 +8,7 @@
 #include "eau.h"
 #include <QBasicTimer>
 #include <QTimer>
+#define CHECK_RESET if(etatreset){if(--nbreset)etatreset = false;return;}
 
 namespace Ui {
 class MainWindow;
@@ -47,7 +48,7 @@ private slots:
     void PorteDouverte();
     void PorteGfermer();
     void PorteDfermer();
-
+    void reset();
 
     //Ajout fonction de simulation
 
@@ -66,6 +67,10 @@ signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();
 private:
+
+    bool etatreset;
+    int nbreset;
+
     Ui::MainWindow *ui;
     Vanne* vanneDroite;
     Vanne* vanneGauche;
