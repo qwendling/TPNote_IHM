@@ -267,3 +267,11 @@ void MainWindow::on_BtnRougeAv_clicked()
 
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    if(ui->APageInterface->currentIndex() == 0)
+        ui->APageInterface->setCurrentIndex(1);
+    else
+        ui->APageInterface->setCurrentIndex(0);
+}

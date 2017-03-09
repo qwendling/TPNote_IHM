@@ -91,6 +91,8 @@ private slots:
     void on_BtnVertAv_clicked();
     void on_BtnRougeAv_clicked();
 
+    void on_pushButton_clicked();
+
 signals:
     void OuvrirVanneGauche();
     void OuvrirVanneDroite();

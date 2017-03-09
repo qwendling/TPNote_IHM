@@ -307,7 +307,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="InterfaceManuelle">
      <widget class="QWidget" name="horizontalLayoutWidget_3">
@@ -722,6 +722,19 @@
        <pixmap resource="../Simulation/image.qrc">:/pics/RessourcesGraph/Porte.png</pixmap>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>470</y>
+        <width>131</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deconnexion</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="InterfaceAutomatique">
      <widget class="QWidget" name="verticalLayoutWidget">
@@ -819,7 +832,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="images.qrc">
         <normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</iconset>
       </property>
       <property name="iconSize">
@@ -1095,7 +1108,7 @@
      <x>0</x>
      <y>0</y>
      <width>1499</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -1112,6 +1125,7 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="../Simulation/image.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>
