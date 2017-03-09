@@ -161,7 +161,7 @@ void MainWindow::on_BateauMilieu_clicked()
 
 void MainWindow::on_StopButton_clicked()
 {
-
+    general.stop();
     //Bloquage des boutons
     ui->Bateau1->setEnabled(false);
     ui->Bateau2->setEnabled(false);

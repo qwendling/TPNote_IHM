@@ -20,6 +20,8 @@ void MainWindow::reset()
     ui->PorteGauche->setVisible(true);
     light_init();
     boat_init();
+    ui->Bateau1->setEnabled(false);
+    ui->Bateau2->setEnabled(false);
     ,return;)
 }
 

@@ -10,8 +10,11 @@
 #include <QTimer>
 #include <QCryptographicHash>
 #define CHECK_RESET if(etatreset){\
-if((--nbreset)<= 0)\
+if((--nbreset)<= 0){\
     etatreset = false;\
+    ui->Bateau1->setEnabled(true);\
+    ui->Bateau2->setEnabled(true);\
+    }\
 return;\
 }
 #define MANUELLE true
