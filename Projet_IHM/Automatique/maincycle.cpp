@@ -98,11 +98,11 @@ void MainWindow::VanneDroiteFermer(){
     if(_eau->avancement == 0)
     {
         ui->BtnFPav->setEnabled(true);
-        ui->BtnFPav->setEnabled(true);
+        ui->BtnOPav->setEnabled(true);
     }
     else{
     ui->BtnOPam->setEnabled(true);
-    ui->BtnOPam->setEnabled(true);
+    ui->BtnFPam->setEnabled(true);
       }
     )
 }
@@ -208,4 +208,14 @@ void MainWindow::PorteDfermer(){
         ui->BtnFVam->setEnabled(true);
         ui->BtnOVam->setEnabled(true);
     })
+}
+
+void MainWindow::FiniMonter(){
+    CHECK_mode(porteGauche->DebutOuverture();
+                ,return;)
+}
+
+void MainWindow::FiniDesc(){
+    CHECK_mode(porteDroite->DebutOuverture();
+                ,return;)
 }

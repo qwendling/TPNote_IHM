@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
     porteGauche(new Porte),
     _eau(new Eau)
 {
+
     etatreset=false;
     ui->setupUi(this);
     ui->BordBas->setVisible(true);
@@ -58,8 +59,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Binding des signaux pour eau
     QObject::connect(_eau, SIGNAL(Etat(double)) , this , SLOT(EauMD(double)));
-    QObject::connect(_eau, SIGNAL(estEnHaut()) , porteGauche , SLOT(DebutOuverture()));
-    QObject::connect(_eau, SIGNAL(estEnBas()) , porteDroite , SLOT(DebutOuverture()));
+    QObject::connect(_eau, SIGNAL(estEnHaut()) , this , SLOT(FiniMonter()));
+    QObject::connect(_eau, SIGNAL(estEnBas()) , this , SLOT(FiniDesc()));
 
     //Init affichage
     ui->BateauMilieu->setVisible(false);
@@ -69,7 +70,11 @@ MainWindow::MainWindow(QWidget *parent) :
     BateauAmont = ui->BateauAmont;
     BateauAvale = ui->BateauAvale;
     InitUi();
-
+    if(ui->APageInterface->currentIndex() == 0){
+        mode=MANUELLE;
+    }else{
+        mode=AUTO;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -181,10 +186,13 @@ void MainWindow::OnConnexionClicked(){
     //Mdp : ihmmdp
     QString s="ac525c20df8218b09888994085a165e2";
     if(s == QString(QCryptographicHash::hash((ui->Mdp2->property("text").toString().toUtf8()),QCryptographicHash::Md5).toHex())){
-        if(ui->APageInterface->currentIndex() == 0)
+        if(ui->APageInterface->currentIndex() == 0){
             ui->APageInterface->setCurrentIndex(1);
-        else
+            mode=AUTO;
+        }else{
             ui->APageInterface->setCurrentIndex(0);
+            mode=MANUELLE;
+        }
     }
 }
 
@@ -298,8 +306,12 @@ void MainWindow::on_BtnRougeAv_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(ui->APageInterface->currentIndex() == 0)
+    if(ui->APageInterface->currentIndex() == 0){
         ui->APageInterface->setCurrentIndex(1);
-    else
+        mode=AUTO;
+    }else{
         ui->APageInterface->setCurrentIndex(0);
+        mode=MANUELLE;
+    }
+
 }

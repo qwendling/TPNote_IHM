@@ -63,6 +63,8 @@ private slots:
     void PorteDfermer();
     void reset();
     void DisableBtn();
+    void FiniMonter();
+    void FiniDesc();
 
     //Ajout fonction de simulation
 
