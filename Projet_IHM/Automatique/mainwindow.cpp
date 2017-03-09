@@ -4,6 +4,9 @@
 #include <QDebug>
 #include <QPixmap>
 
+//§ Pour auto : bouton rouge, authentif + gestion bug/alarme
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
@@ -137,7 +140,9 @@ void MainWindow::on_BateauMilieu_clicked()
     //a faire avec sender
     ui->BateauMilieu->setEnabled(false);
 
-    light_init();
+    //light_init();
+    FeuRouge(ui->VertD,ui->RougeD);
+    FeuRouge(ui->VertG,ui->RougeG);
     FeuRouge(ui->VertP1,ui->RougeP1);
     FeuRouge(ui->VertP2,ui->RougeP2);
 

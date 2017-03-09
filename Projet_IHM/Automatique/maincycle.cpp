@@ -8,7 +8,7 @@
 void MainWindow::reset()
 {
     etatreset=true;
-    nbreset=2;
+    nbreset=4;
 
     vanneDroite->Fermeture();
     vanneGauche->Fermeture();
@@ -52,15 +52,17 @@ void MainWindow::VanneGaucheOuverte(){
 }
 
 void MainWindow::VanneGaucheFermer(){
+    CHECK_RESET
     FeuRouge(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche fermer");
     vanneDroite->Ouverture();
 }
 
 void MainWindow::VanneDroiteFermer(){
+    CHECK_RESET
     qDebug("Vanne droite fermer");
     FeuRouge(ui->VertV2 , ui->RougeV2);
-    porteDroite->DebutOuverture();
+    vanneGauche->Ouverture();
 }
 
 void MainWindow::AvancementPorteDroite(double valeur){
@@ -121,5 +123,5 @@ void MainWindow::PorteDfermer(){
     FeuRouge(ui->VertP2 , ui->RougeP2);
 
     ui->PorteDroite->setVisible(true);
-    porteGauche->DebutOuverture();
+    vanneDroite->Fermeture();
 }
