@@ -51,3 +51,8 @@ void Porte::TakeAlarme(){
     Tfermeture.stop();
     Touverture.stop();
 }
+
+void Porte::bug(){
+    emit Alarme();
+    TakeAlarme();
+}

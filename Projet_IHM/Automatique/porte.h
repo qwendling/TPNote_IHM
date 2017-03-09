@@ -25,6 +25,7 @@ public slots:
     void DebutFermeture();
     void EtapeFermeture();
     void TakeAlarme();
+    void bug();
 signals:
     void Etat(double);
     void Ouvert();

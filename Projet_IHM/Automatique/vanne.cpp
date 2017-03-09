@@ -42,3 +42,8 @@ void Vanne::TakeAlarme(){
     Tfermeture.stop();
     Touverture.stop();
 }
+
+void Vanne::bug(){
+    emit Alarme();
+    TakeAlarme();
+}
