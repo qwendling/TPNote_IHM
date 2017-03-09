@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>854</width>
-    <height>452</height>
+    <width>1152</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/Ecluse.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -46,7 +46,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -65,7 +65,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -84,7 +84,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -103,23 +103,10 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="Eau1">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>110</y>
-      <width>275</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
    <widget class="QGraphicsView" name="Eau3">
@@ -135,19 +122,6 @@
      <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="Porte1">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>80</y>
-      <width>21</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
    <widget class="QGraphicsView" name="Porte2">
     <property name="geometry">
      <rect>
@@ -159,19 +133,6 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="EauSas">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>190</y>
-      <width>191</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 164, 232);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Etap2">
@@ -200,44 +161,6 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Rouge3">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>21</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Vert3">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>50</y>
-      <width>21</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QLabel" name="Rouge4">
     <property name="geometry">
      <rect>
@@ -251,7 +174,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -270,7 +193,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -302,26 +225,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="BateauAvale">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>110</y>
-      <width>91</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau2.png</pixmap>
+     <pixmap resource="image.qrc">:/pics/RessourcesGraph/Bateau1.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -353,19 +257,6 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Etape1_3">
-    <property name="geometry">
-     <rect>
-      <x>700</x>
-      <y>80</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QProgressBar" name="Barre">
     <property name="geometry">
      <rect>
@@ -379,36 +270,165 @@
      <number>24</number>
     </property>
    </widget>
-   <zorder>Terre</zorder>
-   <zorder>Vert1</zorder>
-   <zorder>Vert2</zorder>
-   <zorder>Rouge2</zorder>
-   <zorder>Rouge1</zorder>
-   <zorder>Eau1</zorder>
-   <zorder>Eau3</zorder>
-   <zorder>EauSas</zorder>
-   <zorder>Porte1</zorder>
-   <zorder>Porte2</zorder>
-   <zorder>Etap2</zorder>
-   <zorder>Etape1</zorder>
-   <zorder>Rouge3</zorder>
-   <zorder>Vert3</zorder>
-   <zorder>Rouge4</zorder>
-   <zorder>Vert4</zorder>
-   <zorder>pushButton3</zorder>
-   <zorder>BateauAmont</zorder>
-   <zorder>BateauAvale</zorder>
-   <zorder>pushButton1</zorder>
-   <zorder>Etape1_2</zorder>
-   <zorder>Etape1_3</zorder>
-   <zorder>Barre</zorder>
+   <widget class="QStackedWidget" name="Page">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>80</y>
+      <width>471</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="Etape1_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="Porte1">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>70</y>
+        <width>21</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="Eau1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>180</y>
+        <width>275</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 164, 232);</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="EauSas">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>90</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 164, 232);</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QCommandLinkButton" name="commandLinkButton">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>110</y>
+        <width>187</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CommandLinkButton</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="BateauAvale">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>20</y>
+        <width>91</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="../Automatique/images.qrc">:/pics/RessourcesGraph/Bateau2Milieu.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Vert3">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>160</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="image.qrc">:/pics/RessourcesGraph/GreenFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Rouge3">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>180</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="image.qrc">:/pics/RessourcesGraph/RedFire.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>150</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>854</width>
+     <width>1152</width>
      <height>26</height>
     </rect>
    </property>
@@ -425,6 +445,7 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
+  <include location="image.qrc"/>
   <include location="../Automatique/images.qrc"/>
  </resources>
  <connections/>

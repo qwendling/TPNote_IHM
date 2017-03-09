@@ -200,3 +200,12 @@ void MainWindow::on_Etape1_3_clicked()
 {
     Eau(0.8);
 }
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    if(ui->Page->currentIndex() == 0)
+        ui->Page->setCurrentIndex(1);
+    else
+        ui->Page->setCurrentIndex(0);
+}

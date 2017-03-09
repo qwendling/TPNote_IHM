@@ -52,7 +52,9 @@ public slots:
     void on_Etape1_clicked();
     void on_Etape1_2_clicked();
     void on_Etape1_3_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H
+
 
