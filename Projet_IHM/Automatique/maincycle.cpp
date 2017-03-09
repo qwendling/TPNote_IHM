@@ -41,18 +41,20 @@ void MainWindow::DebutFermetureD(){
 }
 
 void MainWindow::VanneDroiteOuverte(){
-    CHECK_AUTO
+    CHECK_mode(
     qDebug("Vanne droite ouverte");
     FeuVert(ui->VertV2 , ui->RougeV2);
     _eau->Descente();
     //§ Ajouter le bateau qui descend
+    ,return;)
 }
 
 void MainWindow::VanneGaucheOuverte(){
-    CHECK_AUTO
+    CHECK_mode(
     FeuVert(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
+    ,return;)
 }
 
 void MainWindow::VanneGaucheFermer(){
