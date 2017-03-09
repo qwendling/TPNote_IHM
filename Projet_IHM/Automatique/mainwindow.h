@@ -77,7 +77,19 @@ private slots:
     void OnAuthentifClicked();
     void OnConnexionClicked();
 
+    //Bouton
     void on_BtnOVam_clicked();
+    void on_BtnFVam_clicked();
+    void on_BtnOPam_clicked();
+    void on_BtnFPam_clicked();
+    void on_BtnOVav_clicked();
+    void on_BtnFVav_clicked();
+    void on_BtnOPav_clicked();
+    void on_BtnFPav_clicked();
+    void on_BtnVertAm_clicked();
+    void on_BtnRougeAm_clicked();
+    void on_BtnVertAv_clicked();
+    void on_BtnRougeAv_clicked();
 
 signals:
     void OuvrirVanneGauche();

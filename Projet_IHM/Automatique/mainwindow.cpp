@@ -188,7 +188,82 @@ void MainWindow::OnConnexionClicked(){
     }
 }
 
+//BoutonManuelle
+
 void MainWindow::on_BtnOVam_clicked()
 {
 
 }
+
+void MainWindow::on_BtnFVam_clicked()
+{
+
+}
+
+void MainWindow::on_BtnOPam_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnFPam_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnOVav_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnFVav_clicked()
+{
+
+}
+
+
+
+
+void MainWindow::on_BtnOPav_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnFPav_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnVertAm_clicked()
+{
+
+}
+
+
+
+void MainWindow::on_BtnRougeAm_clicked()
+{
+
+}
+
+
+void MainWindow::on_BtnVertAv_clicked()
+{
+
+}
+
+
+void MainWindow::on_BtnRougeAv_clicked()
+{
+
+}
+
