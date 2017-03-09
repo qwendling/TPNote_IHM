@@ -173,10 +173,12 @@ void MainWindow::DebutOuvertureD(){
 
 void MainWindow::VanneDroiteOuverte(){
     qDebug("Vanne droite ouverte");
+    FeuVert(ui->VertV2 , ui->RougeV2);
     porteDroite->DebutOuverture();
 }
 
 void MainWindow::VanneGaucheOuverte(){
+    FeuVert(ui->VertV1 , ui->RougeV1);
     qDebug("Vanne gauche ouverte");
     _eau->Monter();
     porteGauche->DebutOuverture();

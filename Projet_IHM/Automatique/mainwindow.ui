@@ -730,7 +730,7 @@
         <x>620</x>
         <y>30</y>
         <width>131</width>
-        <height>51</height>
+        <height>124</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="Mdp">
@@ -819,7 +819,7 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
+       <iconset resource="images.qrc">
         <normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</normaloff>:/pics/RessourcesGraph/Bateau2Milieu.png</iconset>
       </property>
       <property name="iconSize">
@@ -1075,7 +1075,6 @@
    <zorder>BateauAvale</zorder>
    <zorder>EauSas</zorder>
    <zorder>Eau3</zorder>
-   <zorder>VertV1</zorder>
    <zorder>Decors</zorder>
    <zorder>BateauAmont</zorder>
    <zorder>VertV2</zorder>
@@ -1083,11 +1082,12 @@
    <zorder>RougeP1</zorder>
    <zorder>Porte2</zorder>
    <zorder>Eau1</zorder>
-   <zorder>RougeV1</zorder>
    <zorder>APageInterface</zorder>
    <zorder>Porte1</zorder>
    <zorder>RougeP2</zorder>
    <zorder>RougeV2</zorder>
+   <zorder>VertV1</zorder>
+   <zorder>RougeV1</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -1095,7 +1095,7 @@
      <x>0</x>
      <y>0</y>
      <width>1499</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -1112,6 +1112,7 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="../Simulation/image.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections>
   <connection>
