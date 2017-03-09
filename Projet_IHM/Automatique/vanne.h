@@ -30,6 +30,7 @@ class Vanne : public QThread
         void DebutOuverture();
         void VanneFermer();
         void DebutFermeture();
+        void Alarme();
 
 };
 

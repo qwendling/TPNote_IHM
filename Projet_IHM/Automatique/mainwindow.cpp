@@ -173,6 +173,10 @@ void MainWindow::on_StopButton_clicked()
 
     ui->VertG->setVisible(false);
     ui->VertD->setVisible(false);
+    porteDroite->TakeAlarme();
+    porteGauche->TakeAlarme();
+    vanneDroite->TakeAlarme();
+    vanneGauche->TakeAlarme();
 }
 
 
