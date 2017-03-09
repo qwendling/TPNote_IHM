@@ -45,7 +45,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(porteGauche, SIGNAL(Fermer()), this, SLOT(PorteGfermer()));
     QObject::connect(porteDroite, SIGNAL(Fermer()), this, SLOT(PorteDfermer()));
 
-
+    //Binding des signaux pour eau
+    QObject::connect(_eau, SIGNAL(Etat(double)) , this , SLOT(EauMD(double)));
 
     //Init affichage
     ui->BateauMilieu->setVisible(false);
@@ -285,6 +286,12 @@ void MainWindow::PorteOF(QGraphicsView* porte , float value , IdPorte::enumId id
     }
 }
 
+void MainWindow::EauMD(double value)
+{
+    QRect geo_new = EauSaS->geometry();
+    geo_new.setTop(250-(value*80));
+    EauSaS->setGeometry(geo_new);
+}
 
 //8 tick de fonction pour que l'eau soit a niveau
 void MainWindow::EauSASmonte()

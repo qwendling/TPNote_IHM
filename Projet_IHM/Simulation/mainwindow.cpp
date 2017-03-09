@@ -164,13 +164,8 @@ void MainWindow::Porte(QGraphicsView* porte , float value , IdPorte::enumId idpo
 void MainWindow::Eau(float value)
 {
     QRect geo_new = EauSaS->geometry();
-    //scale
-    //geo_new.setHeight(geo_new.height()-10);
     geo_new.setTop(190-(value*80));
     EauSaS->setGeometry(geo_new);
-
-
-
 }
 
 //Bouton Test
